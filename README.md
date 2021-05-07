@@ -2,7 +2,7 @@
 
 - [Overview](#overview)
 - [MVP](#mvp)
-  <!-- - [Goals](#goals) -->
+- [Post-MVP](#post-mvp)
   - [Libraries and Dependencies](#libraries-and-dependencies)
   - [Client (Front End)](#client-front-end)
     - [Wireframe](#wireframe)
@@ -11,7 +11,6 @@
     - [Time Estimates](#time-estimates)
   - [Server (Back End)](#server-back-end)
     - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 - [Code Issues & Resolutions](#code-issues--resolutions)
 
@@ -21,7 +20,7 @@
 
 _**The Gallery**_
 
-Gallery Walls are all the rage and you can enjoy one in your home too! Well, that may be easier said than done. Here we have a tool to help you get there. Through our gallery templates you can take your own photos and arrange them in our frames, allowing you to visualize the space and what it could look like in your home!
+Gallery Walls are all the rage and you can enjoy one in your home too! Well, we all know that's easier said than done. Here we have a tool to help you get there. Through our gallery templates you can take your own photos and place them in our frames arrangements, allowing you to visualize the space and what it could look like in your home!
 
 <br>
 
@@ -54,7 +53,7 @@ Features
 
 - Download feature
 - Authentication allowing you to store and share your designs
-- more flexibility in gallery customization
+- More flexibility in gallery customization
 
 <br>
 
@@ -101,9 +100,21 @@ src
       |__ GalleryForm.jsx
       |__ ImagesForm.jsx
       |__ GalleryContent.jsx
+      |__ GalleryTemplates/
+            |__ Fourframes.jsx
+            |__ Fiveframes.jsx
+            |__ Sixframes.jsx
+            |__ Sevenframes.jsx
+            |__ Eightframes.jsx
+            |__ CSS/
+                |__ Fourframes.css
+                |__ Fiveframes.css
+                |__ Sixframes.css
+                |__ Sevenframes.css
+                |__ Eightframes.css
 |__ services/
       |__ index.jsx
-|__ images/
+
 
 ```
 
@@ -126,7 +137,7 @@ src
 | Content CSS                                             |    M     |     3 hrs      |      TBD      |     TBD     |
 | Media query - Device 1                                  |    M     |     2 hrs      |      TBD      |     TBD     |
 | Media query - Device 2                                  |    M     |     2 hrs      |      TBD      |     TBD     |
-| TOTAL                                                   |          |     6 hrs      |      TBD      |     TBD     |
+| TOTAL                                                   |          |     33 hrs     |      TBD      |     TBD     |
 
 <br>
 
