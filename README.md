@@ -1,4 +1,4 @@
-# PROJECT 4 README <!-- omit in toc -->
+# The Gallery
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -109,15 +109,24 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Task                                                    | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Create models, routes, and controllers in Ruby on Rails |    M     |     3 hrs      |      TBD      |     TBD     |
+| Set up boilerplate code, components, router, and axios  |    M     |     2 hrs      |      TBD      |     TBD     |
+| Navbar code and CSS                                     |    M     |    1.5 hrs     |      TBD      |     TBD     |
+| Footer code and CSS                                     |    M     |    1.5 hrs     |      TBD      |     TBD     |
+| Title Page code and CSS                                 |    M     |     3 hrs      |      TBD      |     TBD     |
+| Getting Started code and CSS                            |    M     |      1 hr      |      TBD      |     TBD     |
+| Gallery Form code and CSS                               |    M     |     3 hrs      |      TBD      |     TBD     |
+| Gallery Display code and CSS                            |    M     |     2 hrs      |      TBD      |     TBD     |
+| Images Form code and CSS                                |    M     |     3 hrs      |      TBD      |     TBD     |
+| Gallery Content                                         |          |                |               |             |
+| Crating Gallery templates                               |    H     |     3 hrs      |      TBD      |     TBD     |
+| Applying inputs from forms to templates                 |    H     |     3 hrs      |      TBD      |     TBD     |
+| Content CSS                                             |    M     |     3 hrs      |      TBD      |     TBD     |
+| Media query - Device 1                                  |    M     |     2 hrs      |      TBD      |     TBD     |
+| Media query - Device 2                                  |    M     |     2 hrs      |      TBD      |     TBD     |
+| TOTAL                                                   |          |     6 hrs      |      TBD      |     TBD     |
 
 <br>
 
@@ -125,7 +134,7 @@ src
 
 #### ERD Model
 
-![The Gallery ERD Model](https://res.cloudinary.com/mandatea/image/upload/v1620368059/TheGalleryERD_bao87t.png)
+![The Gallery ERD Model](https://res.cloudinary.com/mandatea/image/upload/v1620400760/TheGalleryERD_kub7cs.png)
 <br>
 
 ---
