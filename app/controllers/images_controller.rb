@@ -1,6 +1,16 @@
 class ImagesController < ApplicationController
+  
+  # before_action :set_image, only: %i[show update destroy]
+
+  def all_images
+    @images = Image.all
+
+    render json: @images, include [:gallery]
+  end
+
+
   def index
-    @images = Image.all()
+    @images = Image.all
 
     render json: @images
   end

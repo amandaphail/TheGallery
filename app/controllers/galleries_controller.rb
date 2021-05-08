@@ -1,14 +1,14 @@
 class GalleriesController < ApplicationController
   def index
-    @galleries = Gallery.all()
+    @galleries = Gallery.all
 
     render json: @gallery
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.find(params[:id]) 
 
-    render json: @gallery 
+    render json: @gallery, include [:image]
   end
 
   def create
