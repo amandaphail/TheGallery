@@ -9,6 +9,21 @@
 # Image.destroy_all
 # Gallery.destroy_all
 
+galleries = [
+  {
+    num_of_frames: 6,
+    wall_color: "orange"
+  },
+  {
+    num_of_frames: 5,
+    wall_color: "white"
+  },
+  {
+    num_of_frames: 5,
+    wall_color: "navy blue"
+  }
+]
+
 images = [
   {
     url: "https://i.pinimg.com/originals/9d/8c/fe/9d8cfe99f34df939d2cf4015b34fd4b0.jpg"
@@ -57,21 +72,8 @@ images = [
   
 ]
 
-galleries = [
-  {
-    num_of_frames: 6,
-    wall_color: "orange";
-  },
-  {
-    num_of_frames: 5,
-    wall_color: "white";
-  },
-  {
-    num_of_frames: 5,
-    wall_color: "navy blue";
-  }
-]
-
 
 Gallery.create!(galleries)
 Image.create!(images)
+
+puts "DB seeded"
