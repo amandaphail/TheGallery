@@ -15,4 +15,8 @@ Rails.application.routes.draw do
   # get 'galleries/update'
   # get 'galleries/delete'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :images
+  resources :galleries
+
 end
