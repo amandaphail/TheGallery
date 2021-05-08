@@ -1,8 +1,8 @@
-import React from 'react'
+import "./CSS/gettingstarted.css"
 
 export default function GettingStarted() {
   return (
-    <div>
+    <div id="gettingstarted">
       <h2>
       Getting Started
       </h2>

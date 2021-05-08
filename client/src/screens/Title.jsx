@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../images/GalleryLogo.png"
+import "./CSS/title.css"
 
 export default function Title() {
   return (
