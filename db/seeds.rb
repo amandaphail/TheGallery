@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Image.destroy_all
+# Gallery.destroy_all
+
 images = [
   {
     url: "https://i.pinimg.com/originals/9d/8c/fe/9d8cfe99f34df939d2cf4015b34fd4b0.jpg"
