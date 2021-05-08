@@ -31,7 +31,7 @@ class ImagesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @image = Image.find(params[:id])
 
     @image.destroy

@@ -31,7 +31,7 @@ class GalleriesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @gallery = Gallery.find(params[:id])
     
     @gallery.destroy
