@@ -1,6 +1,6 @@
 class GalleryImagesController < ApplicationController
   def index
-    @collection = gallery.images
+    @collection = Gallery.images
 
     render json: @collection
   end
@@ -11,7 +11,7 @@ class GalleryImagesController < ApplicationController
   def create
     @image = Image.find(params[:image_id])
 
-    if gallery.images << @image
+    if Gallery.images << @image
       render json: gallery.images
     else 
       render json: gallery.errors
@@ -24,6 +24,6 @@ class GalleryImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:image_id])
 
-    gallery.images.delete(@image)
+    Gallery.images.delete(@image)
   end
 end
