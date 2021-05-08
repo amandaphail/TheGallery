@@ -50,6 +50,25 @@ images = [
   {
     url: "https://render.fineartamerica.com/images/rendered/search/print/images-medium-5/pink-peony-watercolor-paintings-of-flowers-beverly-brown-prints.jpg?shape=square"
     # watercolor pink flower
-  },
+  }
   
 ]
+
+galleries = [
+  {
+    num_of_frames: 6,
+    wall_color: "orange";
+  },
+  {
+    num_of_frames: 5,
+    wall_color: "white";
+  },
+  {
+    num_of_frames: 5,
+    wall_color: "navy blue";
+  }
+]
+
+
+Gallery.create!(galleries)
+Image.create!(images)
