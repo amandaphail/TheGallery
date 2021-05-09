@@ -1,15 +1,30 @@
+.formdivs {
+  margin: 10px;
+}
+
+#formcontainer {
+  border: 3px solid #ffbaba;
+  border-radius: 10px;
+  padding: 50px;
+  width: 40%;
+}
+
 #gsform {
   /* color: white; */
   height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 #gettingstarted {
   background-color: #f98c8c;
   color: white;
-  height: 500px;
+  height: 600px;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

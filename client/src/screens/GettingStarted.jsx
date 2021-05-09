@@ -3,14 +3,15 @@ import "./CSS/gettingstarted.css"
 export default function GettingStarted() {
   return (
     <div id="gettingstarted">
-      <h2>
+      <h1>
         Getting Started
-      </h2>
+      </h1>
       
-      <p>Let's talk about the space</p>
+      <div id ="formcontainer">
+      <h4>Let's talk about the space</h4>
 
       <form id="gsform">
-        <div>
+        <div className="formdivs">
         <label>Number of frames: </label>
         <select>
           <option>4</option>
@@ -21,12 +22,13 @@ export default function GettingStarted() {
         </select>
         </div>
 
-        <div>
+        <div className="formdivs">
         <label>Wall Color: </label>
         <input type="color" />
         </div>
         
       </form>
+      </div>
     </div>
   )
 }
