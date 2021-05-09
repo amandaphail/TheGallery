@@ -1,0 +1,25 @@
+#gallerydisplay {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contentcontainer {
+  height: 300px;
+  width: 80%;
+  border: 1px solid black;
+  margin: 40px;
+}
+
+#displayform {
+  width: 80%;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+}
+
+#displayinput {
+  margin: 50px;
+}
