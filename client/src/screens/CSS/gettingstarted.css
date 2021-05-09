@@ -1,3 +1,15 @@
+#gsform {
+  /* color: white; */
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #gettingstarted {
   background-color: #f98c8c;
+  color: white;
+  height: 500px;
+  padding: 50px;
 }
