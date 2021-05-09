@@ -1,0 +1,12 @@
+#gsform {
+  /* color: white; */
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formdivs {
+  margin: 10px;
+}

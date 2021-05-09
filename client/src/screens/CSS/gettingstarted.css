@@ -1,6 +1,6 @@
-.formdivs {
+/* .formdivs {
   margin: 10px;
-}
+} */
 
 #formcontainer {
   border: 3px solid #ffbaba;
@@ -9,14 +9,14 @@
   width: 40%;
 }
 
-#gsform {
-  /* color: white; */
+/* #gsform {
+  
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 #gettingstarted {
   background-color: #f98c8c;

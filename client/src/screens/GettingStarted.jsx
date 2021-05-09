@@ -1,4 +1,5 @@
 import "./CSS/gettingstarted.css"
+import GalleryForm from "../components/GalleryForm.jsx"
 
 export default function GettingStarted() {
   return (
@@ -9,8 +10,8 @@ export default function GettingStarted() {
       
       <div id ="formcontainer">
       <h4>Let's talk about the space</h4>
-
-      <form id="gsform">
+      <GalleryForm />
+      {/* <form id="gsform">
         <div className="formdivs">
         <label>Number of frames: </label>
         <select>
@@ -27,7 +28,7 @@ export default function GettingStarted() {
         <input type="color" />
         </div>
         
-      </form>
+      </form> */}
       </div>
     </div>
   )
