@@ -1,0 +1,11 @@
+#displayform {
+  width: 80%;
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: ; */
+}
+
+.displayinput {
+  margin: 10px;
+  margin-bottom: 50px;
+}

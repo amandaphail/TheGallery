@@ -1,4 +1,5 @@
 import "./CSS/gallerydisplay.css"
+import ImagesForm from "../components/ImagesForm.jsx"
 
 export default function GalleryDisplay() {
   return (
@@ -14,7 +15,8 @@ export default function GalleryDisplay() {
         </div>
       </div>
 
-      <form>
+      <ImagesForm />
+      {/* <form>
         <div id="displayform">
         <label>1: </label>
         <input className="displayinput" type="text"/>
@@ -28,7 +30,7 @@ export default function GalleryDisplay() {
         <label> 4: </label>
         <input className="displayinput" type="text"/>
         </div>
-      </form>
+      </form> */}
     </div>
   )
 }
