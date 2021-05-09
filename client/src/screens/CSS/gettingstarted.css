@@ -21,7 +21,7 @@
 #gettingstarted {
   background-color: #f98c8c;
   color: white;
-  height: 600px;
+  height: 100vh;
   padding: 50px;
   display: flex;
   flex-direction: column;
