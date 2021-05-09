@@ -4,11 +4,11 @@ import "./CSS/title.css"
 
 export default function Title() {
   return (
-    <div>
+    <div id="title">
       <h1>
         Welcome to,
       </h1>
-      <img alt="The Gallery Logo" src={logo}></img>
+      <img id="logo" alt="The Gallery Logo" src={logo}></img>
       <p><span id = "bold">The Gallery</span> gives you the tools you need to get started on that gallery wall you’ve always wanted!</p>
     </div>
   )
