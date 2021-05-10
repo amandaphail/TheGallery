@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
   def all_images
     @images = Image.all
 
-    render json: @images, include [:gallery]
+    render json: @images
   end
 
 
@@ -16,7 +16,7 @@ class ImagesController < ApplicationController
   end
 
   def show
-    # @image = Image.find(params[:id])
+    @image = Image.find(params[:id])
 
     render json: @image 
   end
@@ -26,9 +26,9 @@ class ImagesController < ApplicationController
     @image = @gallery.images.build(image_params)
 
     if @image.save
-      render json: @image, status :created
+      render json: @image, status: :created
     else
-      render json: @image.errors, status :unprocessable_entity
+      render json: @image.errors, status: :unprocessable_entity
     end
   end
 
@@ -38,7 +38,7 @@ class ImagesController < ApplicationController
     if @image.update(image_params)
       render json: @image
     else
-      render json: @image.errors, status :unprocessable_entity
+      render json: @image.errors, status: :unprocessable_entity
     end
   end
 
@@ -51,6 +51,6 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-    params.require(:image).permit(:url)
+    params.require(:image).permit(:url, :position, :frame_color)
   end
 end

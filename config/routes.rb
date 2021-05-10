@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   resources :galleries do
     resources :images
   end
+  # resources :galleries
+  #   resources :images
+  
 
   get "/images", to: "images#all_images"
 

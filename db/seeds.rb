@@ -12,21 +12,6 @@ Gallery.destroy_all
 
 # Gallery.create!(number_of_frames: 6, wall_color: "orange")
 
-galleries = [
-  {
-    number_of_frames: 6,
-    wall_color: "orange"
-  },
-  {
-    number_of_frames: 5,
-    wall_color: "white"
-  },
-  {
-    number_of_frames: 4,
-    wall_color: "navy blue"
-  }
-]
-
 images = [
   {
     url: "https://i.pinimg.com/originals/9d/8c/fe/9d8cfe99f34df939d2cf4015b34fd4b0.jpg"
@@ -75,12 +60,38 @@ images = [
   
 ]
 
+galleries = [
+  {
+    number_of_frames: 6,
+    wall_color: "orange",
+    # image: images[2]
+  },
+  {
+    number_of_frames: 5,
+    wall_color: "white"
+  },
+  {
+    number_of_frames: 4,
+    wall_color: "navy blue"
+  }
+]
+
+
+
+
+if Image.create!(images)
+  puts "Images seeded"
+end
 
 if Gallery.create!(galleries)
   puts "Gallery seeded"
 end
 
-if Image.create!(images)
-  puts "Images seeded"
-end
+# Gallery.first.images << Image.first
+
+Gallery.all.each do |gallery|
+  5.times do
+      gallery.images << Image.all.sample
+      end
+  end
 
