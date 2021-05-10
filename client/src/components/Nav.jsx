@@ -7,6 +7,8 @@ export default function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);    
   const [visible, setVisible] = useState(true);
   // https://www.prwhite.io/blog/sticky-navbar-hides-scroll
+  //maybe drop down instead
+  // https://www.npmjs.com/package/react-navbar-dropdown
 
   return (
     <div id="nav">
