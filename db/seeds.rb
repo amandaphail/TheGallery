@@ -22,7 +22,7 @@ galleries = [
     wall_color: "white"
   },
   {
-    number_of_frames: 5,
+    number_of_frames: 4,
     wall_color: "navy blue"
   }
 ]
@@ -76,7 +76,11 @@ images = [
 ]
 
 
-Gallery.create!(galleries)
-Image.create!(images)
+if Gallery.create!(galleries)
+  puts "Gallery seeded"
+end
 
-puts "DB seeded"
+if Image.create!(images)
+  puts "Images seeded"
+end
+
