@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
 
   def all_images
     @images = Image.all
-    
+
     render json: @images
   end
 
@@ -23,6 +23,7 @@ class ImagesController < ApplicationController
 
   def create
     @gallery = Gallery.find(params[:gallery_id])
+    # loop of array of images that are submitted
     @image = @gallery.images.build(image_params)
 
     if @image.save

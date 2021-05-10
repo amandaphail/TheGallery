@@ -9,7 +9,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.find(params[:id]) 
 
     # render json: @gallery, include: [:image]
-    render json: @gallery
+    render json: @gallery, include: :images
   end
 
   def create

@@ -1,31 +1,31 @@
 class GalleryImagesController < ApplicationController
-  def index
-    @collection = Gallery.images
+  # def index
+  #   @collection = Gallery.images
 
-    render json: @collection
-  end
+  #   render json: @collection
+  # end
 
-  def show
+  # def show
 
-  end
+  # end
 
-  def create
-    @image = Image.find(params[:image_id])
+  # def create
+  #   @image = Image.find(params[:image_id])
 
-    if Gallery.images << @image
-      render json: gallery.images
-    else 
-      render json: gallery.errors
-    end
-  end
+  #   if Gallery.images << @image
+  #     render json: gallery.images
+  #   else 
+  #     render json: gallery.errors
+  #   end
+  # end
 
-  def update
+  # def update
     
-  end
+  # end
 
-  def destroy
-    @image = Image.find(params[:image_id])
+  # def destroy
+  #   @image = Image.find(params[:image_id])
 
-    Gallery.images.delete(@image)
-  end
+  #   Gallery.images.delete(@image)
+  # end
 end
