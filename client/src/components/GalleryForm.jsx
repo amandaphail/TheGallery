@@ -15,8 +15,9 @@ export default function GalleryForm() {
     setGallery((prevState) => ({
       ...prevState, [id]: value
     }))
+    
   }
-
+  console.log(gallery)
   async function handleSubmit(event) {
     event.preventDefault()
     await createGallery(gallery)
