@@ -1,8 +1,13 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import {useState} from"react"
 import "./CSS/nav.css"
 
 
 export default function Nav() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);    
+  const [visible, setVisible] = useState(true);
+  // https://www.prwhite.io/blog/sticky-navbar-hides-scroll
+
   return (
     <div id="nav">
       <div id="links">
