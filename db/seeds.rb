@@ -62,7 +62,7 @@ images = [
 
 galleries = [
   {
-    number_of_frames: 6,
+    number_of_frames: 5,
     wall_color: "orange",
     # image: images[2]
   },
@@ -71,7 +71,7 @@ galleries = [
     wall_color: "white"
   },
   {
-    number_of_frames: 4,
+    number_of_frames: 5,
     wall_color: "navy blue"
   }
 ]
