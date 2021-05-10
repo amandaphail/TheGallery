@@ -7,7 +7,6 @@ export default function GalleryContent() {
     <div id = "content">
       <div>
         <FourFrames />
-        Template
         </div>
         <div>
         {/* desk image */}
