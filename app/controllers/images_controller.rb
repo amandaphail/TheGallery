@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
 
   def all_images
     @images = Image.all
-
+    
     render json: @images
   end
 
