@@ -1,18 +1,13 @@
 import "./CSS/gallerydisplay.css"
 import ImagesForm from "../components/ImagesForm.jsx"
+import GalleryContent from "../components/GalleryContent.jsx"
 
 export default function GalleryDisplay() {
   return (
     <div id="gallerydisplay">
       
-       
       <div id="contentcontainer">
-        <div>
-          {/* <GalleryContent /> */}
-        </div>
-        <div>
-          {/* desk image */}
-        </div>
+        <GalleryContent />
       </div>
 
       <ImagesForm />

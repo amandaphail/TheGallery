@@ -1,0 +1,8 @@
+/* might do grid for content layout so desk image takes up less(not equal) space? */
+#content {
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
