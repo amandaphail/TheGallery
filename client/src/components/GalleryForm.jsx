@@ -1,5 +1,6 @@
 import "./CSS/galleryform.css"
 import {useState} from "react"
+import { createGallery } from "../services/galleries"
 
 export default function GalleryForm() {
 
@@ -16,13 +17,15 @@ export default function GalleryForm() {
     }))
   }
 
-  function handleSubmit() {
-    
+  async function handleSubmit(event) {
+    event.preventDefault()
+    await createGallery(gallery)
+    // history push to gallery display page?
   }
 
   return (
     <div>
-      <form id="gsform">
+      <form id="gsform" onSubmit={handleSubmit}>
         <div className="formdivs">
         <label>Number of frames: </label>
         <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
