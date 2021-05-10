@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # get 'images/create'
   # get 'images/update'
   # get 'images/delete'
-  # get 'galleries/index'
+  # get '/galleries', to: 'galleries#index'
   # get 'galleries/show'
   # get 'galleries/create'
   # get 'galleries/update'

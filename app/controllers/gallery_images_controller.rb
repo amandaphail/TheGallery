@@ -6,6 +6,7 @@ class GalleryImagesController < ApplicationController
   end
 
   def show
+
   end
 
   def create
@@ -19,6 +20,7 @@ class GalleryImagesController < ApplicationController
   end
 
   def update
+    
   end
 
   def destroy

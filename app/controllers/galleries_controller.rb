@@ -2,14 +2,14 @@ class GalleriesController < ApplicationController
   def index
     @galleries = Gallery.all
 
-    render json: @gallery
+    render json: @galleries
   end
 
   def show
     @gallery = Gallery.find(params[:id]) 
 
-    render json: @gallery, include: [:image]
-    # render json: @gallery
+    # render json: @gallery, include: [:image]
+    render json: @gallery
   end
 
   def create
@@ -23,7 +23,7 @@ class GalleriesController < ApplicationController
   end
 
   def update
-    @gallery = Gallery.find(gallery_params)
+    @gallery = Gallery.find(params[:id])
 
     if @gallery.update(gallery_params)
       render json: @gallery 
