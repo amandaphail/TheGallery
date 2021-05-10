@@ -1,16 +1,19 @@
 import "./CSS/gallerycontent.css"
-// import FourFrames from "./GalleryTemplates/FourFrames.jsx"
+import FourFrames from "./GalleryTemplates/FourFrames.jsx"
+import desk from "../images/desk.png"
 
 export default function GalleryContent() {
   return (
     <div id = "content">
       <div>
-        {/* <GalleryTemplate4 /> */}
+        <FourFrames />
         Template
         </div>
         <div>
         {/* desk image */}
-        Desk Image 
+        <img id ="desk" src={desk} />
+        {/* <a href="https://lovepik.com/images/png-book.html">Book Png vectors by Lovepik.com</a> */}
+        {/* Desk Image  */}
         </div>
     </div>
   )

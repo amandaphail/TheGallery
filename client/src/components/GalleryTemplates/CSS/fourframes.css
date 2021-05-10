@@ -1,0 +1,28 @@
+#fourframescontainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#one {
+  background-color: rgb(187, 185, 185);
+  width: 150px;
+  height: 200px;
+}
+
+#two {
+  background-color: rgb(187, 185, 185);
+  width: 150px;
+  height: 100px;
+}
+
+#three {
+  background-color: rgb(187, 185, 185);
+  width: 70px;
+  height: 70px;
+}
+
+#four {
+  background-color: rgb(187, 185, 185);
+  width: 70px;
+  height: 70px;
+}

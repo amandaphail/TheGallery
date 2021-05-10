@@ -4,5 +4,9 @@
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
+}
+
+#desk {
+  width: 30%;
 }
