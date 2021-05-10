@@ -26,6 +26,7 @@ class ImagesController < ApplicationController
     @image = @gallery.images.build(image_params)
 
     if @image.save
+      @gallery.images << @image
       render json: @image, status: :created
     else
       render json: @image.errors, status: :unprocessable_entity
@@ -33,7 +34,7 @@ class ImagesController < ApplicationController
   end
 
   def update
-    # @image = Image.find(params[:id])
+    @image = Image.find(params[:id])
 
     if @image.update(image_params)
       render json: @image
@@ -43,7 +44,7 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    # @image = Image.find(params[:id])
+    @image = Image.find(params[:id])
 
     if @image.destroy
       render json: {message: "Image has been deleted"}
