@@ -19,7 +19,11 @@ export default function ImagesForm() {
 
         <label> 4: </label>
         <input className="displayinput" type="text"/>
+        
+        <input className="displayinput" type="submit" />
         </div>
+
+
       </form>
     </div>
   )

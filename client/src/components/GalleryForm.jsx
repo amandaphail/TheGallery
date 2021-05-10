@@ -19,6 +19,10 @@ export default function GalleryForm() {
         <label>Wall Color: </label>
         <input type="color" />
         </div>
+
+        <div className="formdivs">
+        <input type="submit"/>
+        </div>
         
       </form>
     </div>
