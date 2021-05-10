@@ -6,20 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Image.destroy_all
-# Gallery.destroy_all
+Image.destroy_all
+Gallery.destroy_all
+
+
+# Gallery.create!(number_of_frames: 6, wall_color: "orange")
 
 galleries = [
   {
-    num_of_frames: 6,
+    number_of_frames: 6,
     wall_color: "orange"
   },
   {
-    num_of_frames: 5,
+    number_of_frames: 5,
     wall_color: "white"
   },
   {
-    num_of_frames: 5,
+    number_of_frames: 5,
     wall_color: "navy blue"
   }
 ]
