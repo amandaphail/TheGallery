@@ -1,6 +1,6 @@
 import "./CSS/galleryform.css"
 import {useState} from "react"
-import { createGallery, getGallery } from "../services/galleries"
+import { createGallery } from "../services/galleries"
 
 export default function GalleryForm(props) {
 
