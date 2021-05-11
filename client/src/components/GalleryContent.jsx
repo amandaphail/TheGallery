@@ -7,9 +7,12 @@ export default function GalleryContent(props) {
   let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
-  console.log(`Content: ${frameNumber}`)
-  console.log(`Content GalleryID: ${galleryID}`)
+  // console.log(`Content: ${frameNumber}`)
+  // console.log(`Content GalleryID: ${galleryID}`)
   
+//extract number of frames from galleryID
+  //extract wall color from galleryID
+
   return (
     <div id = "content">
       <div>

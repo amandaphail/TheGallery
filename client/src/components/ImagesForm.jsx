@@ -1,25 +1,39 @@
 import "./CSS/imagesform.css"
 import { useState } from "react"
-import {postImage} from "../services/images.jsx"
+import { postImage } from "../services/images.jsx"
+import { getGallery } from "../services/galleries.jsx"
 
 export default function ImagesForm(props) {
 
   let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
-  console.log(`Image Form: ${frameNumber}`)
+  // console.log(`Image Form: ${frameNumber}`)
   console.log(`Image Form GalleryID: ${galleryID}`)
 // if gallery frame number set - this how many image inputs to have & which gallery template to use
   
-  const [images, setImages] = useState([])
+  
+  async function yourGallery(id) {
+    if (id !== 0) {
+      let galleryInfo = await getGallery(galleryID)
+      console.log(galleryInfo)
+    }
+  }
+
+  yourGallery(galleryID)
+  
+  
+  const [image, setImage] = useState({})
   // {
-  //   url: ""
+  //   url: "",
+  //   position: id,
+  //   frame_color: ""
   // }
   
   function handleChange(event) {
-    let { id, value } = event.target
-    setImages((prevState) => ({
-      ...prevState, [id]: value
+    let { value } = event.target
+    setImage((prevState) => ({
+      ...prevState, url: value
     }))
 
   }
@@ -28,13 +42,17 @@ export default function ImagesForm(props) {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    images.map((img) => {
-      
+    await image.map((img) => {
+      postImage(galleryID, img)
+      return img
     })
-    await postImage(galleryID, image)
     //loop here?
     //image.map
   }
+
+
+  //extract number of frames from gallery ID
+
 
 
 
