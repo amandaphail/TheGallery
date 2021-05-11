@@ -1,6 +1,6 @@
 import "./CSS/galleryform.css"
 import {useState} from "react"
-import { createGallery } from "../services/galleries"
+import { createGallery, getGallery } from "../services/galleries"
 
 export default function GalleryForm() {
 
@@ -22,17 +22,19 @@ export default function GalleryForm() {
     event.preventDefault()
     const created = await createGallery(gallery)
     // history push to gallery display page?
-    let yourGallery = created.id
+    let yourGallery = created
     console.log(yourGallery)
-    yourGalleryID(yourGallery)
-    // return created.id
+    console.log(yourGallery.number_of_frames)
+    yourGalleryID(yourGallery.id)
+    //setFrameNumber(yourGallery.number_of_frames) --> useState on higher level that frameNumber applies to images form = number of image inputs
   }
 
   // console.log(created)
 
-  function yourGalleryID(id) {
+  async function yourGalleryID(id) {
     console.log(`your gallery's id: ${id}`)
-    
+    let createdGallery = await getGallery(id)
+    console.log(createdGallery)
   }
 
   return (
