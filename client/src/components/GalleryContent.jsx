@@ -1,5 +1,6 @@
 import "./CSS/gallerycontent.css"
 import FourFrames from "./GalleryTemplates/FourFrames.jsx"
+import FiveFrames from "./GalleryTemplates/FiveFrames.jsx"
 import desk from "../images/desk.png"
 import { getGallery } from "../services/galleries.jsx"
 import{useState, useEffect} from "react"
@@ -39,8 +40,20 @@ export default function GalleryContent(props) {
     yourGallery(galleryID)
   }, [props])
 
+  // console.log(gallery.sumber_of_frames)
+  console.log(gallery.number_of_frames)
 
-  console.log(gallery.wall_color)
+  const displaytemplate = () => {
+    if (gallery.number_of_frames === 4) {
+      return (
+      <FourFrames />
+      )
+    } else if (gallery.number_of_frames === 5) {
+      <FiveFrames />
+    }
+  }
+
+
   const style = {
     background: `${gallery.wall_color}`,
     //going to make this galler.wall_color
