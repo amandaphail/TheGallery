@@ -17,7 +17,7 @@ export default function ImagesForm(props) {
   //extract number of frames from gallery ID
   async function yourGallery(id) {
   
-      let galleryInfo = await getGallery(galleryID)
+      let galleryInfo = await getGallery(id)
       // console.log(galleryInfo)
       await setGallery(galleryInfo)
   }
