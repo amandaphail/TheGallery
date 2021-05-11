@@ -9,10 +9,10 @@ export default function GalleryDisplay(props) {
     <div id="gallerydisplay">
       
       <div id="contentcontainer">
-        <GalleryContent frameNumber={frameNumber}/>
+        <GalleryContent frameNumber={frameNumber} galleryID={props.galleryID}/>
       </div>
 
-      <ImagesForm frameNumber={frameNumber} />
+      <ImagesForm frameNumber={frameNumber} galleryID={props.galleryID}/>
       {/* <form>
         <div id="displayform">
         <label>1: </label>

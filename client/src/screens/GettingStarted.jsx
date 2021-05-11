@@ -11,7 +11,7 @@ export default function GettingStarted(props) {
       
       <div id ="formcontainer">
       <h4>Let's talk about the space</h4>
-      <GalleryForm setFrameNumber={props.setFrameNumber} />
+        <GalleryForm setFrameNumber={props.setFrameNumber} setGalleryID={props.setGalleryID}/>
       {/* <form id="gsform">
         <div className="formdivs">
         <label>Number of frames: </label>

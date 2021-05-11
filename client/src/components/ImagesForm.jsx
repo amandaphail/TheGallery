@@ -5,28 +5,33 @@ import {postImage} from "../services/images.jsx"
 export default function ImagesForm(props) {
 
   let frameNumber = props.frameNumber
+  let galleryID = props.galleryID
 
   console.log(`Image Form: ${frameNumber}`)
+  console.log(`Image Form GalleryID: ${galleryID}`)
 // if gallery frame number set - this how many image inputs to have & which gallery template to use
   
-  const [image, setImage] = useState([])
+  const [images, setImages] = useState([])
   // {
   //   url: ""
   // }
   
   function handleChange(event) {
     let { id, value } = event.target
-    setImage((prevState) => ({
+    setImages((prevState) => ({
       ...prevState, [id]: value
     }))
 
   }
 
   console.log(image)
-  
+
   async function handleSubmit(event) {
     event.preventDefault()
-    await postImage(image)
+    images.map((img) => {
+      
+    })
+    await postImage(galleryID, image)
     //loop here?
     //image.map
   }

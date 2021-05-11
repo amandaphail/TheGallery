@@ -8,9 +8,12 @@ import Footer from "./components/Footer.jsx"
 import {useState} from "react"
 
 function App() {
-const [frameNumber, setFrameNumber] = useState(0)
+  const [frameNumber, setFrameNumber] = useState(0)
+  const [galleryID, setGalleryID] = useState(0)
 
-  console.log(`Frame number: ${frameNumber}`)
+  // console.log(galleryID)
+
+  // console.log(`Frame number: ${frameNumber}`)
 
 
   return (
@@ -20,10 +23,10 @@ const [frameNumber, setFrameNumber] = useState(0)
         <Title />
       </Route>
       <Route>
-        <GettingStarted setFrameNumber={setFrameNumber}/>
+        <GettingStarted setFrameNumber={setFrameNumber} setGalleryID={setGalleryID}/>
       </Route>
       <Route>
-        <GalleryDisplay frameNumber={frameNumber}/>
+        <GalleryDisplay frameNumber={frameNumber} galleryID={galleryID}/>
       </Route>
       <Footer />
     </div>
