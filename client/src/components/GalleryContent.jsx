@@ -4,7 +4,7 @@ import desk from "../images/desk.png"
 
 export default function GalleryContent(props) {
   
-  let frameNumber = props.frameNumber
+  // let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
   // console.log(`Content: ${frameNumber}`)

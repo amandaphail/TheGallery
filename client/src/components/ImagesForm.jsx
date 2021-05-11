@@ -5,7 +5,7 @@ import { getGallery } from "../services/galleries.jsx"
 
 export default function ImagesForm(props) {
 
-  let frameNumber = props.frameNumber
+  // let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
   // console.log(`Image Form: ${frameNumber}`)

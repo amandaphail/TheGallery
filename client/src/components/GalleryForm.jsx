@@ -4,7 +4,7 @@ import { createGallery } from "../services/galleries"
 
 export default function GalleryForm(props) {
 
-  let setFrameNumber = props.setFrameNumber
+  // let setFrameNumber = props.setFrameNumber
   let setGalleryID = props.setGalleryID
 
   const [gallery, setGallery] = useState({
@@ -26,10 +26,10 @@ export default function GalleryForm(props) {
     const yourGallery = await createGallery(gallery)
     // history push to gallery display page?
     // let yourGallery = created
-    console.log(yourGallery)
-    console.log(yourGallery.number_of_frames)
+    // console.log(yourGallery)
+    // console.log(yourGallery.number_of_frames)
 
-    setFrameNumber(yourGallery.number_of_frames)
+    // setFrameNumber(yourGallery.number_of_frames)
     setGalleryID(yourGallery.id)
 
     

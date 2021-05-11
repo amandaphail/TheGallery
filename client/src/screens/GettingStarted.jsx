@@ -11,25 +11,7 @@ export default function GettingStarted(props) {
       
       <div id ="formcontainer">
       <h4>Let's talk about the space</h4>
-        <GalleryForm setFrameNumber={props.setFrameNumber} setGalleryID={props.setGalleryID}/>
-      {/* <form id="gsform">
-        <div className="formdivs">
-        <label>Number of frames: </label>
-        <select>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
-        </div>
-
-        <div className="formdivs">
-        <label>Wall Color: </label>
-        <input type="color" />
-        </div>
-        
-      </form> */}
+        <GalleryForm setGalleryID={props.setGalleryID}/>
       </div>
     </div>
   )
