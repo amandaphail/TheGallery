@@ -17,11 +17,22 @@ export default function GalleryForm() {
     }))
     
   }
-  console.log(gallery)
+  // console.log(gallery)
   async function handleSubmit(event) {
     event.preventDefault()
-    await createGallery(gallery)
+    const created = await createGallery(gallery)
     // history push to gallery display page?
+    let yourGallery = created.id
+    console.log(yourGallery)
+    yourGalleryID(yourGallery)
+    // return created.id
+  }
+
+  // console.log(created)
+
+  function yourGalleryID(id) {
+    console.log(`your gallery's id: ${id}`)
+    
   }
 
   return (
