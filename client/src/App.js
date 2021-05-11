@@ -9,7 +9,7 @@ import {useState} from "react"
 
 function App() {
   // const [frameNumber, setFrameNumber] = useState(0)
-  const [galleryID, setGalleryID] = useState(0)
+  const [galleryID, setGalleryID] = useState()
 
   // console.log(galleryID)
 

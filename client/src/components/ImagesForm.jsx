@@ -1,5 +1,5 @@
 import "./CSS/imagesform.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { postImage } from "../services/images.jsx"
 import { getGallery } from "../services/galleries.jsx"
 
@@ -23,10 +23,16 @@ export default function ImagesForm(props) {
     }
   }
 
-  yourGallery(galleryID)
+  useEffect(() => {
+    yourGallery(galleryID)
+  },[])
+  
   
 
   console.log(gallery)
+  
+
+
   // galleryID!==0 ? console.log(gallery.number_of_frames) :  console.log("No gallery ID yet")  
   
 
