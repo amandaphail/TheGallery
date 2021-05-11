@@ -12,17 +12,27 @@ export default function ImagesForm(props) {
   console.log(`Image Form GalleryID: ${galleryID}`)
 // if gallery frame number set - this how many image inputs to have & which gallery template to use
   
+  const [gallery, setGallery] = useState({})
   
+  //extract number of frames from gallery ID
   async function yourGallery(id) {
     if (id !== 0) {
       let galleryInfo = await getGallery(galleryID)
-      console.log(galleryInfo)
+      // console.log(galleryInfo)
+      setGallery(galleryInfo)
     }
   }
 
   yourGallery(galleryID)
   
+
+  console.log(gallery)
+  // galleryID!==0 ? console.log(gallery.number_of_frames) :  console.log("No gallery ID yet")  
   
+
+
+
+  //attach images to gallery and display
   const [image, setImage] = useState({})
   // {
   //   url: "",
@@ -31,9 +41,9 @@ export default function ImagesForm(props) {
   // }
   
   function handleChange(event) {
-    let { value } = event.target
+    let { id, value } = event.target
     setImage((prevState) => ({
-      ...prevState, url: value
+      ...prevState, position:id, url: value
     }))
 
   }
@@ -51,7 +61,7 @@ export default function ImagesForm(props) {
   }
 
 
-  //extract number of frames from gallery ID
+  
 
 
 

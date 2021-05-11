@@ -1,6 +1,7 @@
 import "./CSS/gallerycontent.css"
 import FourFrames from "./GalleryTemplates/FourFrames.jsx"
 import desk from "../images/desk.png"
+import { getGallery } from "../services/galleries.jsx"
 
 export default function GalleryContent(props) {
   
@@ -12,6 +13,16 @@ export default function GalleryContent(props) {
   
 //extract number of frames from galleryID
   //extract wall color from galleryID
+
+  async function yourGallery(id) {
+    if (id !== 0) {
+      let galleryInfo = await getGallery(galleryID)
+      // console.log(galleryInfo)
+    }
+  }
+
+  yourGallery(galleryID)
+
 
   return (
     <div id = "content">
