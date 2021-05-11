@@ -10,21 +10,11 @@ export default function GalleryContent(props) {
   // let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
-  // console.log(`Content: ${frameNumber}`)
   // console.log(`Content GalleryID: ${galleryID}`)
   
   //extract number of frames from galleryID
   //extract wall color from galleryID
   
-
-  // async function yourGallery(id) {
-  //   if (id !== 0) {
-  //     let galleryInfo = await getGallery(galleryID)
-  //     // console.log(galleryInfo)
-  //   }
-  // }
-
-  // yourGallery(galleryID)
 
   const [gallery, setGallery] = useState({})
   
@@ -43,13 +33,12 @@ export default function GalleryContent(props) {
   // console.log(gallery.sumber_of_frames)
   console.log(gallery.number_of_frames)
 
-  const displaytemplate = () => {
+  const displayTemplate = () => {
     if (gallery.number_of_frames === 4) {
-      return (
-      <FourFrames />
-      )
+      return <FourFrames />
+
     } else if (gallery.number_of_frames === 5) {
-      <FiveFrames />
+      return <FiveFrames />
     }
   }
 
@@ -62,7 +51,7 @@ export default function GalleryContent(props) {
   return (
     <div id="content" style={style}>
       <div>
-        <FourFrames />
+        {displayTemplate()}
         </div>
         <div>
        
