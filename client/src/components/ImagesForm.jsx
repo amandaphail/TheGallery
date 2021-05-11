@@ -29,7 +29,7 @@ export default function ImagesForm(props) {
   
   
 
-  console.log(gallery)
+  // console.log(gallery)
   
 
 
@@ -54,6 +54,11 @@ export default function ImagesForm(props) {
     setImages(sampleData)
   },[gallery])
   
+
+
+
+
+
   function handleChange(event) {
     // console.log(images)
     // console.dir(event.target.type)
@@ -71,16 +76,10 @@ export default function ImagesForm(props) {
     } else if (type === "color") {
       copy.frame_color = value
     }
+    //working?
     
-    // console.log(foundImage)
-    // let index = images.findIndex((image) => {
-    //   return image.position === Number(id)
-    // })
-    // console.log(index)
+    
     setImages((prevState) => {
-      // console.log(images.indexOf(copy))
-
-      // prevState.splice(index, 1)
       return prevState.map((item) => {
         if (item.position === copy.position) {
           return copy

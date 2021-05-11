@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
 
-    render json: @image 
+    render json: @image, include: :gallery_images
   end
 
   def create
