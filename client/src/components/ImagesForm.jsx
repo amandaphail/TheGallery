@@ -10,22 +10,23 @@ export default function ImagesForm(props) {
 
   // console.log(`Image Form: ${frameNumber}`)
   console.log(`Image Form GalleryID: ${galleryID}`)
-// if gallery frame number set - this how many image inputs to have & which gallery template to use
+  // if gallery frame number set - this how many image inputs to have & which gallery template to use
   
   const [gallery, setGallery] = useState({})
   
   //extract number of frames from gallery ID
   async function yourGallery(id) {
-    if (id !== 0) {
+    // if (id !== 0) {
       let galleryInfo = await getGallery(galleryID)
       // console.log(galleryInfo)
-      setGallery(galleryInfo)
-    }
+      await setGallery(galleryInfo)
+    // }
   }
 
   useEffect(() => {
     yourGallery(galleryID)
-  },[])
+
+  }, [props])
   
   
 
@@ -39,26 +40,61 @@ export default function ImagesForm(props) {
 
 
   //attach images to gallery and display
-  const [image, setImage] = useState({})
+  const [images, setImages] = useState([])
   // {
   //   url: "",
   //   position: id,
   //   frame_color: ""
   // }
+
+  useEffect(() => {
+    let sampleData = []
+    for (let i = 1; i <= gallery.number_of_frames; i++){
+      sampleData.push({
+           url: "",
+           position: i,
+           frame_color: ""
+      })
+    }
+    setImages(sampleData)
+  },[gallery])
   
   function handleChange(event) {
+    // console.log(images)
     let { id, value } = event.target
-    setImage((prevState) => ({
-      ...prevState, position:id, url: value
-    }))
+    let foundImage = images.find((image) => {
+      // console.log(image.position === Number(id))
+      return image.position === Number(id)
+    })
+    let copy = foundImage
+    copy.url = value
+    // console.log(foundImage)
+    // let index = images.findIndex((image) => {
+    //   return image.position === Number(id)
+    // })
+    // console.log(index)
+    setImages((prevState) => {
+      // console.log(images.indexOf(copy))
+
+      // prevState.splice(index, 1)
+      return prevState.map((item) => {
+        if (item.position === copy.position) {
+          return copy
+        } else {
+          return item
+        }
+      })
+        
+    }
+    )
 
   }
 
-  console.log(image)
+  console.log(images)
 
   async function handleSubmit(event) {
     event.preventDefault()
-    await image.map((img) => {
+    await images.map((img) => {
       postImage(galleryID, img)
       return img
     })
@@ -68,8 +104,23 @@ export default function ImagesForm(props) {
 
 
   
+// input loop
+  const displayInput = () => {
+    let html = ""
 
+    for (let i = 1; i <= gallery.number_of_frames; i++){
+      html += (
+        <div>
+          <input id={i} className="displayinput" type="text" onChange={handleChange} />
+          <input id={i} className="displayinput" type="color" onChange={handleChange} />
+        </div>
+        
+        )
+    }
+    return html
+  }
 
+ 
 
 
   return (
@@ -87,7 +138,9 @@ export default function ImagesForm(props) {
         <input id="3" className="displayinput" type="text" onChange={handleChange}/>
 
         <label> 4: </label>
-        <input id="4" className="displayinput" type="text" onChange={handleChange}/>
+          <input id="4" className="displayinput" type="text" onChange={handleChange} />
+          
+          {displayInput()}
         
         <input className="displayinput" type="submit" />
         </div>
