@@ -56,16 +56,22 @@ export default function ImagesForm(props) {
   
   function handleChange(event) {
     // console.log(images)
-    console.dir(event.target.type)
+    // console.dir(event.target.type)
   
-    let { id, value } = event.target
+    let { id, value, type } = event.target
     let foundImage = images.find((image) => {
       // console.log(image.position === Number(id))
       return image.position === Number(id)
     })
     let copy = foundImage
     //if text - url, if color - frame color
-    copy.url = value
+// console.log(typeof type)
+    if (type === "text"){
+      copy.url = value
+    } else if (type === "color") {
+      copy.frame_color = value
+    }
+    
     // console.log(foundImage)
     // let index = images.findIndex((image) => {
     //   return image.position === Number(id)
