@@ -48,7 +48,7 @@ export default function ImagesForm(props) {
       sampleData.push({
            url: "",
            position: i,
-           frame_color: ""
+           frame_color: "#000000"
       })
     }
     setImages(sampleData)

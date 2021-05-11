@@ -9,7 +9,7 @@ export default function GalleryForm(props) {
 
   const [gallery, setGallery] = useState({
     number_of_frames: 4,
-    wall_color: ""
+    wall_color: "#000000"
   })
 
 
