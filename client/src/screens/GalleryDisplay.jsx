@@ -2,15 +2,17 @@ import "./CSS/gallerydisplay.css"
 import ImagesForm from "../components/ImagesForm.jsx"
 import GalleryContent from "../components/GalleryContent.jsx"
 
-export default function GalleryDisplay() {
+export default function GalleryDisplay(props) {
+  let frameNumber = props.frameNumber
+
   return (
     <div id="gallerydisplay">
       
       <div id="contentcontainer">
-        <GalleryContent />
+        <GalleryContent frameNumber={frameNumber}/>
       </div>
 
-      <ImagesForm />
+      <ImagesForm frameNumber={frameNumber} />
       {/* <form>
         <div id="displayform">
         <label>1: </label>

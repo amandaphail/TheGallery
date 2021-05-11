@@ -1,7 +1,10 @@
 import "./CSS/imagesform.css"
 
-export default function ImagesForm() {
+export default function ImagesForm(props) {
 
+  let frameNumber = props.frameNumber
+
+  console.log(`Image Form: ${frameNumber}`)
 // if gallery frame number set - this how many image inputs to have & which gallery template to use
 
   return (

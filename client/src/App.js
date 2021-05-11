@@ -12,7 +12,7 @@ const [frameNumber, setFrameNumber] = useState(0)
 
   console.log(`Frame number: ${frameNumber}`)
 
-  
+
   return (
     <div className="App">
       {/* <Nav/> */}
@@ -23,7 +23,7 @@ const [frameNumber, setFrameNumber] = useState(0)
         <GettingStarted setFrameNumber={setFrameNumber}/>
       </Route>
       <Route>
-        <GalleryDisplay />
+        <GalleryDisplay frameNumber={frameNumber}/>
       </Route>
       <Footer />
     </div>

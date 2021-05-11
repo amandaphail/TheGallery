@@ -2,7 +2,12 @@ import "./CSS/gallerycontent.css"
 import FourFrames from "./GalleryTemplates/FourFrames.jsx"
 import desk from "../images/desk.png"
 
-export default function GalleryContent() {
+export default function GalleryContent(props) {
+  
+  let frameNumber = props.frameNumber
+
+  console.log(`Content: ${frameNumber}`)
+
   return (
     <div id = "content">
       <div>
