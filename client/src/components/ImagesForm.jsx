@@ -61,12 +61,15 @@ export default function ImagesForm(props) {
   
   function handleChange(event) {
     // console.log(images)
+    console.dir(event.target.type)
+  
     let { id, value } = event.target
     let foundImage = images.find((image) => {
       // console.log(image.position === Number(id))
       return image.position === Number(id)
     })
     let copy = foundImage
+    //if text - url, if color - frame color
     copy.url = value
     // console.log(foundImage)
     // let index = images.findIndex((image) => {
@@ -106,19 +109,15 @@ export default function ImagesForm(props) {
   
 // input loop
   const displayInput = () => {
-    let html = ""
-
-    for (let i = 1; i <= gallery.number_of_frames; i++){
-      html += (
+    return [...Array(gallery.number_of_frames)].map((item, i) => {
+      // console.log(i)
+      return (
         <div>
-          <input id={i} className="displayinput" type="text" onChange={handleChange} />
-          <input id={i} className="displayinput" type="color" onChange={handleChange} />
-        </div>
-        
-        )
-    }
-    return html
-  }
+          <input id={i + 1} className="displayinput" type="text" onChange={handleChange} />
+          <input id={i + 1} className="displayinput" type="color" onChange={handleChange} />
+      </div>
+    )
+  })}
 
  
 
@@ -127,9 +126,9 @@ export default function ImagesForm(props) {
     <div>
        <form onSubmit={handleSubmit}>
         <div id="displayform">
-        <label>1: </label>
-          <input id="1" className="displayinput" type="text" onChange={handleChange} />
-          {/* id = i --> once loop over */}
+        {/* <label>1: </label> */}
+          {/* <input id="1" className="displayinput" type="text" onChange={handleChange} />
+          id = i --> once loop over
 
         <label> 2: </label>
         <input id ="2" className="displayinput" type="text" onChange={handleChange}/>
@@ -138,7 +137,7 @@ export default function ImagesForm(props) {
         <input id="3" className="displayinput" type="text" onChange={handleChange}/>
 
         <label> 4: </label>
-          <input id="4" className="displayinput" type="text" onChange={handleChange} />
+          <input id="4" className="displayinput" type="text" onChange={handleChange} /> */}
           
           {displayInput()}
         
