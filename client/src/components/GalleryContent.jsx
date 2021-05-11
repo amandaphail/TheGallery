@@ -56,7 +56,7 @@ export default function GalleryContent(props) {
         <div>
        
         <img id ="desk" src={desk} alt="desk"/>
-        {/* <a href="https://lovepik.com/images/png-book.html">Book Png vectors by Lovepik.com</a> */}
+        
         </div>
     </div>
   )
