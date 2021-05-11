@@ -1,7 +1,8 @@
 import "./CSS/gettingstarted.css"
 import GalleryForm from "../components/GalleryForm.jsx"
 
-export default function GettingStarted() {
+export default function GettingStarted(props) {
+
   return (
     <div id="gettingstarted">
       <h1>
@@ -10,7 +11,7 @@ export default function GettingStarted() {
       
       <div id ="formcontainer">
       <h4>Let's talk about the space</h4>
-      <GalleryForm />
+      <GalleryForm setFrameNumber={props.setFrameNumber} />
       {/* <form id="gsform">
         <div className="formdivs">
         <label>Number of frames: </label>
