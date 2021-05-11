@@ -1,12 +1,30 @@
+#imagesform {
+  width: 80%;
+  /* display: flex;
+  justify-content: center; */
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
 #displayform {
   width: 80%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   /* flex-direction: column; */
   /* justify-content: ; */
 }
 
-.displayinput {
+#inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .displayinput {
   margin: 10px;
   margin-bottom: 50px;
-}
+} */

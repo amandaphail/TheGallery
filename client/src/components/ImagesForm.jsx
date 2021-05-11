@@ -16,11 +16,10 @@ export default function ImagesForm(props) {
   
   //extract number of frames from gallery ID
   async function yourGallery(id) {
-    // if (id !== 0) {
+  
       let galleryInfo = await getGallery(galleryID)
       // console.log(galleryInfo)
       await setGallery(galleryInfo)
-    // }
   }
 
   useEffect(() => {
@@ -41,11 +40,7 @@ export default function ImagesForm(props) {
 
   //attach images to gallery and display
   const [images, setImages] = useState([])
-  // {
-  //   url: "",
-  //   position: id,
-  //   frame_color: ""
-  // }
+  
 
   useEffect(() => {
     let sampleData = []
@@ -123,8 +118,8 @@ export default function ImagesForm(props) {
 
 
   return (
-    <div>
-       <form onSubmit={handleSubmit}>
+    <div id = "imagesform">
+       <form id="form" onSubmit={handleSubmit}>
         <div id="displayform">
         {/* <label>1: </label> */}
           {/* <input id="1" className="displayinput" type="text" onChange={handleChange} />
@@ -138,10 +133,13 @@ export default function ImagesForm(props) {
 
         <label> 4: </label>
           <input id="4" className="displayinput" type="text" onChange={handleChange} /> */}
-          
-          {displayInput()}
+          <div id ="inputs">
+            {displayInput()}
+          </div>
         
-        <input className="displayinput" type="submit" />
+          <div>
+            <input className="displayinput" type="submit" />
+          </div>
         </div>
 
 
