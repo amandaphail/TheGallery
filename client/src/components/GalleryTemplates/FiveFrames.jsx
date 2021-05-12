@@ -4,7 +4,7 @@ import "./CSS/frames.css"
 export default function FourFrames(props) {
 
   let gallery = props.gallery
-  // console.log(gallery.images[0].url)
+  // console.log(gallery.gallery_images[0].frame_color)
 
   const templateDisplay = () => {
     if (gallery) {
@@ -31,11 +31,24 @@ export default function FourFrames(props) {
 
     } 
   }
+  // let one = () =>{
+  // if (gallery.gallery_images) {
+    let one = gallery.gallery_images[0].frame_color
+//     return one
+//   // }
+// }
+
+  const styleOne = {
+    border: `5px solid ${one}`,
+  }
+
+    
+  
 
   const templateOne = () => {
     if (gallery.images[0]) {
       // console.log("one")
-        return <img id="img-one" src={gallery.images[0].url} /> 
+        return <img id="img-one" src={gallery.images[0].url} style={styleOne} /> 
     }
   }
 
