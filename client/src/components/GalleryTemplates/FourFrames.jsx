@@ -26,10 +26,7 @@ export default function FourFrames(props) {
           </>
       )
 
-    } else {
-      
-    }
-
+    } 
   }
 
   const templateOne = () => {
