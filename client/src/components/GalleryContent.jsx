@@ -7,22 +7,26 @@ import{useState, useEffect} from "react"
 
 export default function GalleryContent(props) {
   let galleryID = props.galleryID
+  let display = props.display
 
-  // console.log(galleryID, display)
+  console.log(galleryID, display)
   
 
   const [gallery, setGallery] = useState({})
   
   //extract number of frames from ID
   async function yourGallery(id) {
-  
     let galleryInfo = await getGallery(id)
     await setGallery(galleryInfo)
   }
 
   useEffect(() => {
     yourGallery(galleryID)
-  }, [props])
+  }, [props.galleryID])
+
+  useEffect(() => {
+    yourGallery(display)
+  },[props.display])
 
 
   const displayTemplate = () => {

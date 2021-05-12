@@ -5,7 +5,7 @@ import { getGallery } from "../services/galleries.jsx"
 
 export default function ImagesForm(props) {
   let galleryID = props.galleryID
-  // let setDisplay = props.setDisplay
+  let setDisplay = props.setDisplay
   const [gallery, setGallery] = useState({})
   
   //extract number of frames from gallery ID
@@ -71,7 +71,7 @@ export default function ImagesForm(props) {
       return img
     }))
     yourGallery(galleryID)
-    // setDisplay(galleryID)
+    setDisplay(galleryID)
   }
   
   

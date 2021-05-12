@@ -45,7 +45,7 @@ export default function GalleryForm(props) {
   // }
 
   
-  console.log(galleryID)
+  // console.log(galleryID)
   
   const button = () => {
     // if (galleryID) {
