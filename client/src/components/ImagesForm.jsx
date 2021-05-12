@@ -4,39 +4,23 @@ import { postImage } from "../services/images.jsx"
 import { getGallery } from "../services/galleries.jsx"
 
 export default function ImagesForm(props) {
-
   let galleryID = props.galleryID
-
-  // console.log(`Image Form GalleryID: ${galleryID}`)
-
-  // if gallery frame number set - this how many image inputs to have & which gallery template to use
-  
+  let setDisplay = props.setDisplay
   const [gallery, setGallery] = useState({})
   
   //extract number of frames from gallery ID
   async function yourGallery(id) {
-  
       let galleryInfo = await getGallery(id)
       // console.log(galleryInfo)
-      await setGallery(galleryInfo)
+    await setGallery(galleryInfo)
+    // await setDisplay(galleryInfo)
+    
   }
 
   useEffect(() => {
     yourGallery(galleryID)
-
   }, [props])
   
-  
-
-  // console.log(gallery)
-  
-
-
-  // galleryID!==0 ? console.log(gallery.number_of_frames) :  console.log("No gallery ID yet")  
-  
-
-
-
   //attach images to gallery and display
   const [images, setImages] = useState([])
   
@@ -53,30 +37,18 @@ export default function ImagesForm(props) {
     setImages(sampleData)
   },[gallery])
   
-
-
-
-
-
   function handleChange(event) {
-    // console.log(images)
-    // console.dir(event.target.type)
-  
     let { id, value, type } = event.target
     let foundImage = images.find((image) => {
-      // console.log(image.position === Number(id))
       return image.position === Number(id)
     })
     let copy = foundImage
-    //if text - url, if color - frame color
-// console.log(typeof type)
+  
     if (type === "text"){
       copy.url = value
     } else if (type === "color") {
       copy.frame_color = value
-    }
-    //working?
-    
+    }    
     
     setImages((prevState) => {
       return prevState.map((item) => {
@@ -86,9 +58,7 @@ export default function ImagesForm(props) {
           return item
         }
       })
-        
-    }
-    )
+    })
 
   }
 
@@ -97,36 +67,38 @@ export default function ImagesForm(props) {
   async function handleSubmit(event) {
     event.preventDefault()
     await Promise.all(images.map( async (img) => {
-      
       await postImage(galleryID, img)
       return img
     }))
     yourGallery(galleryID)
-
-  // console.log(gallery.images? gallery.images : "what")
-  // console.log(gallery.images[2])
-  // console.log(gallery.images)
-    
+    setDisplay(galleryID)
   }
+  
+  
 
-  // console.log(gallery.images)
-  console.log(gallery ? gallery : "what")
-  // console.log(gallery.images ? gallery.images : "what")
-  // only shows up if i change something in code?
+  // console.log(gallery)
+  // console.log(gallery.gallery_images[1].position)
+
+
   
 
 
 // input loop
   const displayInput = () => {
-    return [...Array(gallery.number_of_frames)].map((item, i) => {
-      // console.log(i)
-      return (
-        <div>
-          <input id={i + 1} className="displayinput" type="text" onChange={handleChange} />
-          <input id={i + 1} className="displayinput" type="color" onChange={handleChange} />
-      </div>
-    )
-  })}
+    if (galleryID) {
+      return [...Array(gallery.number_of_frames)].map((item, i) => {
+        // console.log(i)
+        return (
+          <div id="infoinput">
+            <label>{i + 1}</label>
+            <input id={i + 1} className="displayinput" type="text" onChange={handleChange} />
+            <input id={i + 1} className="displayinput" type="color" onChange={handleChange} />
+          </div>
+        
+        )
+      })
+    }
+  }
 
  
 

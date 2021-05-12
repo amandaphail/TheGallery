@@ -45,7 +45,6 @@ export default function GalleryContent(props) {
 
   const style = {
     background: `${gallery.wall_color}`,
-    //going to make this galler.wall_color
   }
 
   return (

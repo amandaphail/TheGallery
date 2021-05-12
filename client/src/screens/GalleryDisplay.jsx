@@ -1,9 +1,12 @@
 import "./CSS/gallerydisplay.css"
 import ImagesForm from "../components/ImagesForm.jsx"
 import GalleryContent from "../components/GalleryContent.jsx"
+import {useState} from "react"
 
 export default function GalleryDisplay(props) {
-  // let frameNumber = props.frameNumber
+  const [display, setDisplay] = useState({})
+
+  console.log(display)
 
   return (
     <div id="gallerydisplay">
@@ -12,7 +15,7 @@ export default function GalleryDisplay(props) {
         <GalleryContent galleryID={props.galleryID}/>
       </div>
 
-      <ImagesForm galleryID={props.galleryID}/>
+      <ImagesForm galleryID={props.galleryID} setDisplay={setDisplay}/>
       
     </div>
   )

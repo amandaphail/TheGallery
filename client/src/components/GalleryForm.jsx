@@ -72,9 +72,9 @@ export default function GalleryForm(props) {
         <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
           <option>4</option>
           <option>5</option>
-          <option>6</option>
+          {/* <option>6</option>
           <option>7</option>
-          <option>8</option>
+          <option>8</option> */}
         </select>
         </div>
 
