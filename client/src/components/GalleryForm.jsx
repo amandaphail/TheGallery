@@ -27,26 +27,25 @@ export default function GalleryForm(props) {
     const yourGallery = await createGallery(gallery)
     setGalleryID(yourGallery.id)
     // history push to gallery display page?
-    // let yourGallery = created
-    // console.log(yourGallery)
-    // console.log(yourGallery.number_of_frames)
-
-    // setFrameNumber(yourGallery.number_of_frames)
-
     
-    // console.log(typeof yourGallery.number_of_frames)
-    // yourGalleryID(yourGallery.id)
-    //setFrameNumber(yourGallery.number_of_frames) --> useState on higher level that frameNumber applies to images form = number of image inputs
   }
 
-  
+// with conditional in handle submit function
 
-  // async function yourGalleryID(id) {
-  //   console.log(`your gallery's id: ${id}`)
-  //   let createdGallery = await getGallery(id)
-  //   console.log(createdGallery)
+  // async function update () {
+  //   console.log(galleryID)
+  //   await updateGallery(galleryID, gallery)
+  //   console.log("update button works")
+  //   console.log(galleryID)
   // }
-  // console.log(galleryID)
+
+  // async function create(){
+  //   const yourGallery = await createGallery(gallery)
+  //   setGalleryID(yourGallery.id)
+  // }
+
+  
+  console.log(galleryID)
   
   const button = () => {
     if (galleryID) {
