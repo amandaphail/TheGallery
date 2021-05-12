@@ -31,7 +31,7 @@ export default function GalleryContent(props) {
   }, [props])
 
   // console.log(gallery.sumber_of_frames)
-  console.log(gallery.number_of_frames)
+  // console.log(gallery.number_of_frames)
 
   const displayTemplate = () => {
     if (gallery.number_of_frames === 4) {

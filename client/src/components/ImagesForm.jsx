@@ -5,11 +5,10 @@ import { getGallery } from "../services/galleries.jsx"
 
 export default function ImagesForm(props) {
 
-  // let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
-  // console.log(`Image Form: ${frameNumber}`)
-  console.log(`Image Form GalleryID: ${galleryID}`)
+  // console.log(`Image Form GalleryID: ${galleryID}`)
+
   // if gallery frame number set - this how many image inputs to have & which gallery template to use
   
   const [gallery, setGallery] = useState({})
@@ -93,7 +92,7 @@ export default function ImagesForm(props) {
 
   }
 
-  console.log(images)
+  // console.log(images)
 
   async function handleSubmit(event) {
     event.preventDefault()

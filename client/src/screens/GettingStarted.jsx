@@ -11,7 +11,7 @@ export default function GettingStarted(props) {
       
       <div id ="formcontainer">
       <h4>Let's talk about the space</h4>
-        <GalleryForm setGalleryID={props.setGalleryID}/>
+        <GalleryForm setGalleryID={props.setGalleryID} galleryID={props.galleryID}/>
       </div>
     </div>
   )

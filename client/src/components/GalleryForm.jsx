@@ -1,10 +1,11 @@
 import "./CSS/galleryform.css"
 import {useState} from "react"
-import { createGallery } from "../services/galleries"
+import { createGallery, updateGallery } from "../services/galleries"
 
 export default function GalleryForm(props) {
 
   // let setFrameNumber = props.setFrameNumber
+  let galleryID = props.galleryID
   let setGalleryID = props.setGalleryID
 
   const [gallery, setGallery] = useState({
@@ -24,13 +25,13 @@ export default function GalleryForm(props) {
   async function handleSubmit(event) {
     event.preventDefault()
     const yourGallery = await createGallery(gallery)
+    setGalleryID(yourGallery.id)
     // history push to gallery display page?
     // let yourGallery = created
     // console.log(yourGallery)
     // console.log(yourGallery.number_of_frames)
 
     // setFrameNumber(yourGallery.number_of_frames)
-    setGalleryID(yourGallery.id)
 
     
     // console.log(typeof yourGallery.number_of_frames)
@@ -45,6 +46,24 @@ export default function GalleryForm(props) {
   //   let createdGallery = await getGallery(id)
   //   console.log(createdGallery)
   // }
+  // console.log(galleryID)
+  
+  const button = () => {
+    if (galleryID) {
+      return (<button onclick={update()}>Update</button>)
+    } else {
+      return (
+        <input type="submit"/>
+        )
+    }
+  }
+
+  const update = () => {
+    console.log(galleryID)
+    updateGallery(galleryID, gallery)
+    console.log("update button works")
+    console.log(galleryID)
+  }
 
   return (
     <div>
@@ -66,7 +85,8 @@ export default function GalleryForm(props) {
         </div>
 
         <div className="formdivs">
-        <input type="submit"/>
+          {/* <input type="submit" /> */}
+          {button()}
         </div>
         
       </form>

@@ -23,7 +23,7 @@ function App() {
         <Title />
       </Route>
       <Route>
-        <GettingStarted setGalleryID={setGalleryID}/>
+        <GettingStarted setGalleryID={setGalleryID} galleryID={galleryID}/>
       </Route>
       <Route>
         <GalleryDisplay galleryID={galleryID}/>
