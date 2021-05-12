@@ -96,16 +96,26 @@ export default function ImagesForm(props) {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    await images.map((img) => {
-      postImage(galleryID, img)
+    await Promise.all(images.map( async (img) => {
+      
+      await postImage(galleryID, img)
       return img
-    })
-    //loop here?
-    //image.map
+    }))
+    yourGallery(galleryID)
+
+  // console.log(gallery.images? gallery.images : "what")
+  // console.log(gallery.images[2])
+  // console.log(gallery.images)
+    
   }
 
-
+  // console.log(gallery.images)
+  console.log(gallery ? gallery : "what")
+  // console.log(gallery.images ? gallery.images : "what")
+  // only shows up if i change something in code?
   
+
+
 // input loop
   const displayInput = () => {
     return [...Array(gallery.number_of_frames)].map((item, i) => {
@@ -125,18 +135,7 @@ export default function ImagesForm(props) {
     <div id = "imagesform">
        <form id="form" onSubmit={handleSubmit}>
         <div id="displayform">
-        {/* <label>1: </label> */}
-          {/* <input id="1" className="displayinput" type="text" onChange={handleChange} />
-          id = i --> once loop over
-
-        <label> 2: </label>
-        <input id ="2" className="displayinput" type="text" onChange={handleChange}/>
-
-        <label> 3: </label>
-        <input id="3" className="displayinput" type="text" onChange={handleChange}/>
-
-        <label> 4: </label>
-          <input id="4" className="displayinput" type="text" onChange={handleChange} /> */}
+        
           <div id ="inputs">
             {displayInput()}
           </div>

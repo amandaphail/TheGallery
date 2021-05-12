@@ -12,7 +12,7 @@ export const getImage = async (gallery_id, id) => {
 
 
 export const postImage = async (gallery_id, imageData) => {
-  const resp = await api.post(`/galleries/${gallery_id}/images`, imageData)
+  const resp = await api.post(`/galleries/${gallery_id}/images`, { ...imageData, gallery_id })
   return resp.data
 }
 

@@ -22,16 +22,28 @@ class ImagesController < ApplicationController
   end
 
   def create
+    # render json: params
     @gallery = Gallery.find(params[:gallery_id])
+    puts @gallery.inspect
     # loop of array of images that are submitted
-    @image = @gallery.images.build(image_params)
+    @image = Image.new(url: params[:url])
+    if @image.save!
+      @gallery_image = GalleryImage.new(image: @image, gallery_id: params[:gallery_id], position: params[:position], frame_color: params[:frame_color])
 
-    if @image.save
-      @gallery.images << @image
-      render json: @image, status: :created
-    else
-      render json: @image.errors, status: :unprocessable_entity
+      if @gallery_image.save!
+        render json: @gallery_image, status: :created
+      else
+        render json: @image.errors, status: :unprocessable_entity
+      end
+  
     end
+
+    # if @image.save
+    #   # @gallery.images << @image
+    #   render json: @image, status: :created
+    # else
+    #   render json: @image.errors, status: :unprocessable_entity
+    # end
   end
 
   def update
@@ -53,6 +65,6 @@ class ImagesController < ApplicationController
   end
 
   def image_params
-    params.require(:image).permit(:url, :position, :frame_color)
+    params.require(:image).permit(:url, gallery_images_attributes: [:position, :frame_color, :gallery_id])
   end
 end
