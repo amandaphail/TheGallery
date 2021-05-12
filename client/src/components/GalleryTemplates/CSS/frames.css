@@ -3,7 +3,7 @@
   justify-content: space-around;
 }
 
-#one {
+._1 {
   background-color: rgb(187, 185, 185);
   width: 150px;
   height: 200px;
@@ -11,52 +11,59 @@
   max-height: 200px;
 }
 
-#two {
+._2 {
   background-color: rgb(187, 185, 185);
   width: 150px;
   height: 100px;
 }
 
-#three {
+._3 {
   background-color: rgb(187, 185, 185);
   width: 70px;
   height: 70px;
 }
 
-#four {
+._4 {
   background-color: rgb(187, 185, 185);
   width: 70px;
   height: 70px;
 }
 
-#five {
+._5 {
   background-color: rgb(187, 185, 185);
   width: 70px;
   height: 70px;
 }
 
-#img-one {
+.img-1 {
   width: 150px;
   height: 200px;
   max-width: 150px;
   max-height: 200px;
 }
 
-#img-two {
+.img-2 {
   width: 150px;
   height: 100px;
   max-width: 150px;
   max-height: 100px;
 }
 
-#img-three {
+.img-3 {
   width: 70px;
   height: 70px;
   max-width: 70px;
   max-height: 70px;
 }
 
-#img-four {
+.img-4 {
+  width: 70px;
+  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.img-5 {
   width: 70px;
   height: 70px;
   max-width: 70px;
