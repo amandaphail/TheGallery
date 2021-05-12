@@ -6,14 +6,9 @@ import { getGallery } from "../services/galleries.jsx"
 import{useState, useEffect} from "react"
 
 export default function GalleryContent(props) {
-  
-  // let frameNumber = props.frameNumber
   let galleryID = props.galleryID
 
-  // console.log(`Content GalleryID: ${galleryID}`)
-  
-  //extract number of frames from galleryID
-  //extract wall color from galleryID
+  // console.log(galleryID, display)
   
 
   const [gallery, setGallery] = useState({})
@@ -22,7 +17,6 @@ export default function GalleryContent(props) {
   async function yourGallery(id) {
   
     let galleryInfo = await getGallery(id)
-    // console.log(galleryInfo)
     await setGallery(galleryInfo)
   }
 
@@ -30,8 +24,6 @@ export default function GalleryContent(props) {
     yourGallery(galleryID)
   }, [props])
 
-  // console.log(gallery.sumber_of_frames)
-  // console.log(gallery.number_of_frames)
 
   const displayTemplate = () => {
     if (gallery.number_of_frames === 4) {
@@ -42,6 +34,8 @@ export default function GalleryContent(props) {
     }
   }
 
+
+  console.log(gallery)
 
   const style = {
     background: `${gallery.wall_color}`,
