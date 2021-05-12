@@ -31,15 +31,15 @@ export default function GalleryContent(props) {
 
   const displayTemplate = () => {
     if (gallery.number_of_frames === 4) {
-      return <FourFrames />
+      return <FourFrames gallery={gallery}/>
 
     } else if (gallery.number_of_frames === 5) {
-      return <FiveFrames />
+      return <FiveFrames gallery={gallery}/>
     }
   }
 
 
-  console.log(gallery)
+  // console.log(gallery)
 
   const style = {
     background: `${gallery.wall_color}`,

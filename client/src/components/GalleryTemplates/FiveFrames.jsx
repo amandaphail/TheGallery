@@ -1,7 +1,11 @@
 import React from 'react'
 import "./CSS/frames.css"
 
-export default function FourFrames() {
+export default function FourFrames(props) {
+
+  let gallery = props.gallery
+  console.log(gallery)
+
   return (
     <div id="framescontainer">
       <div id ="one">

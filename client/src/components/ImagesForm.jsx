@@ -35,7 +35,11 @@ export default function ImagesForm(props) {
       })
     }
     setImages(sampleData)
-  },[gallery])
+  }, [gallery])
+  
+  useEffect(() => {
+    setDisplay("null")
+  },[galleryID])
   
   function handleChange(event) {
     let { id, value, type } = event.target
