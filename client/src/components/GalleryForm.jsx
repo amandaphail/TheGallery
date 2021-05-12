@@ -48,13 +48,13 @@ export default function GalleryForm(props) {
   console.log(galleryID)
   
   const button = () => {
-    if (galleryID) {
-      return (<button onclick={update()}>Update</button>)
-    } else {
-      return (
-        <input type="submit"/>
-        )
-    }
+    // if (galleryID) {
+    //   return (<button onclick={update()}>Update</button>)
+    // } else {
+    //   return (
+      return  <input type="submit"/>
+        // )
+    
   }
 
   const update = () => {
