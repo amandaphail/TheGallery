@@ -127,7 +127,7 @@ export default function GalleryForm(props) {
         </div>
 
         <div className="formdivs">
-        <input type="submit"/>
+        <input type="submit" />
           {/* {button()} */}
         </div>
         
