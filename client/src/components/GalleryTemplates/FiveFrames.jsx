@@ -5,7 +5,7 @@ export default function FourFrames(props) {
 
   let gallery = props.gallery
   // console.log(gallery.gallery_images[0].frame_color)
-  console.log(gallery)
+  // console.log(gallery)
 
   const templateDisplay = () => {
     if (gallery) {
@@ -13,7 +13,7 @@ export default function FourFrames(props) {
         let foundImage = gallery.images.find((image) => {
           return image.id === item.image_id
         })
-        return (<div className={`_${index + 1 }`}>
+        return (<div key={index} className={`_${index + 1 }`}>
           <img alt ="Input in gallery" className={`img-${index + 1}`}src = {foundImage.url}/>
       </div>)
       }

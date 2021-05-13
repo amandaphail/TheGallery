@@ -12,7 +12,7 @@ export default function FourFrames(props) {
         let foundImage = gallery.images.find((image) => {
           return image.id === item.image_id
         })
-        return (<div className={`_${index + 1 }`}>
+        return (<div key={index} className={`_${index + 1 }`}>
           <img alt ="Input in gallery" className={`img-${index + 1}`}src = {foundImage.url}/>
       </div>)
       }

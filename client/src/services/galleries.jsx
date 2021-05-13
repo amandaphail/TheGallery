@@ -6,8 +6,10 @@ export const getAllGalleries = async () => {
 }
 
 export const getGallery = async (id) => {
-  const resp = await api.get(`/galleries/${id}`)
-  return resp.data
+  if (id) {    
+    const resp = await api.get(`/galleries/${id}`)
+    return resp.data
+  }
 }
 
 

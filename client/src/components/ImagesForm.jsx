@@ -10,10 +10,13 @@ export default function ImagesForm(props) {
   
   //extract number of frames from gallery ID
   async function yourGallery(id) {
+    if (id) {
+      
       let galleryInfo = await getGallery(id)
       // console.log(galleryInfo)
-    await setGallery(galleryInfo)
-    // await setDisplay(galleryInfo)
+      await setGallery(galleryInfo)
+      // await setDisplay(galleryInfo)
+    }
     
   }
 
@@ -95,7 +98,7 @@ export default function ImagesForm(props) {
       return [...Array(gallery.number_of_frames)].map((item, i) => {
         // console.log(i)
         return (
-          <div id="infoinput">
+          <div key={i} id="infoinput">
             <label>{i + 1}</label>
             <input id={i + 1} className="displayinput" type="text" onChange={handleChange} />
             <input id={i + 1} className="displayinput" type="color" onChange={handleChange} />

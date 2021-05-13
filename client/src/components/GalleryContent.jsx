@@ -9,7 +9,7 @@ export default function GalleryContent(props) {
   let galleryID = props.galleryID
   let display = props.display
 
-  console.log(galleryID, display)
+  // console.log(galleryID, display)
   
 
   const [gallery, setGallery] = useState({})
@@ -17,8 +17,10 @@ export default function GalleryContent(props) {
   //extract number of frames from ID
   //also using once images set
   async function yourGallery(id) {
-    let galleryInfo = await getGallery(id)
-    await setGallery(galleryInfo)
+    if (galleryID) {
+      let galleryInfo = await getGallery(id)
+      await setGallery(galleryInfo)
+    } 
   }
 
   useEffect(() => {

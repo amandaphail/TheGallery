@@ -35,7 +35,7 @@ export default function GalleryForm(props) {
     await updateGallery(galleryID, gallery)
     // setGalleryID(yourGallery.id)
     props.setToggle(prevState => !prevState)
-    console.log(gallery)
+    // console.log(gallery)
     // history push to gallery display page?
     
   }
@@ -59,7 +59,7 @@ export default function GalleryForm(props) {
     if (!galleryID || galleryID === "null") {
       return createForm() 
     } else {
-      console.log("You've already created a gallery!")
+      // console.log("You've already created a gallery!")
       return updateForm()
       
     }
@@ -67,18 +67,20 @@ export default function GalleryForm(props) {
     
 
   const getYourGallery = async () => {
-    const info = await getGallery(galleryID);
-    await setGallery(info);
-    // this is allowing it to populate with what you have already in your gallery?
-    console.log(gallery)
+    if (galleryID) {
+      const info = await getGallery(galleryID);
+      await setGallery(info);
+      // this is allowing it to populate with what you have already in your gallery?
+      // console.log(gallery)
+    }
   };
 
   
 
   const deleteYourGallery = async () => {
-    console.log(galleryID)
+    // console.log(galleryID)
     await deleteGallery(galleryID)
-    console.log(`${galleryID} has been deleted`)
+    // console.log(`${galleryID} has been deleted`)
     // setGalleryID("null")
     window.location.reload()
   }
