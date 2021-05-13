@@ -34,6 +34,7 @@ export default function GalleryForm(props) {
     event.preventDefault()
     await updateGallery(galleryID, gallery)
     // setGalleryID(yourGallery.id)
+    props.setToggle(prevState => !prevState)
     console.log(gallery)
     // history push to gallery display page?
     
@@ -50,6 +51,7 @@ export default function GalleryForm(props) {
     getYourGallery()
   }, [galleryID])
   //stops infinite loop
+  //use this to reset galleryID - sent to ?
 
   const formDisplay = () => {
     
@@ -62,14 +64,6 @@ export default function GalleryForm(props) {
     }
   }
     
-//     if (galleryID) {
-//       console.log("You've already created a gallery!")
-//     getYourGallery()
-//     return updateForm() 
-//   } else {
-//     return createForm()
-//   }
-// }
 
   const getYourGallery = async () => {
     const info = await getGallery(galleryID);
@@ -191,28 +185,6 @@ export default function GalleryForm(props) {
       {/* {createForm()} */}
       {/* {updateForm()} */}
       
-
-
-      {/* <form id="gsform" onSubmit={handleSubmit}>
-        <div className="formdivs">
-        <label>Number of frames: </label>
-        <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
-          <option>4</option>
-          <option>5</option>
-        </select>
-        </div>
-
-        <div className="formdivs">
-        <label>Wall Color: </label>
-          <input type="color" id="wall_color" value={gallery.wall_color} onChange={handleChange}/>
-        </div>
-
-        <div className="formdivs">
-          {/* <input type="submit" /> */}
-          {/* {button()} */}
-        {/* </div>
-        
-      </form> */} 
     </div>
   )
 }

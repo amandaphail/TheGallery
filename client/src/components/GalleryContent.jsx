@@ -15,6 +15,7 @@ export default function GalleryContent(props) {
   const [gallery, setGallery] = useState({})
   
   //extract number of frames from ID
+  //also using once images set
   async function yourGallery(id) {
     let galleryInfo = await getGallery(id)
     await setGallery(galleryInfo)
@@ -22,11 +23,13 @@ export default function GalleryContent(props) {
 
   useEffect(() => {
     yourGallery(galleryID)
-  }, [props.galleryID])
+  }, [props.galleryID, props.toggle])
+  //use efect for gallery to update when i submit update - [?] 
 
   useEffect(() => {
     yourGallery(display)
-  },[props.display])
+  }, [props.display])
+  // this showing whats displayed so have to reset this when update submit
 
 
   const displayTemplate = () => {

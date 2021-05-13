@@ -10,7 +10,7 @@ import {useState} from "react"
 function App() {
   // const [frameNumber, setFrameNumber] = useState(0)
   const [galleryID, setGalleryID] = useState()
-
+  const [toggle, setToggle] = useState(false)
   // console.log(galleryID)
 
   // console.log(`Frame number: ${frameNumber}`)
@@ -23,10 +23,10 @@ function App() {
         <Title />
       </Route>
       <Route>
-        <GettingStarted setGalleryID={setGalleryID} galleryID={galleryID}/>
+        <GettingStarted setToggle={setToggle} setGalleryID={setGalleryID} galleryID={galleryID}/>
       </Route>
       <Route>
-        <GalleryDisplay galleryID={galleryID}/>
+        <GalleryDisplay toggle={toggle} galleryID={galleryID}/>
       </Route>
       <Footer />
     </div>

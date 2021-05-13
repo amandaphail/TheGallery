@@ -11,7 +11,7 @@ export default function GalleryDisplay(props) {
     <div id="gallerydisplay">
       
       <div id="contentcontainer">
-        <GalleryContent galleryID={props.galleryID} display={display}/>
+        <GalleryContent toggle={props.toggle} galleryID={props.galleryID} display={display}/>
       </div>
 
       <ImagesForm galleryID={props.galleryID} setDisplay={setDisplay}/>
