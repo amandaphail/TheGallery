@@ -23,11 +23,13 @@ export default function GalleryContent(props) {
 
   useEffect(() => {
     yourGallery(galleryID)
+     //eslint-disable-next-line
   }, [props.galleryID, props.toggle])
   //use efect for gallery to update when i submit update - [?] 
 
   useEffect(() => {
     yourGallery(display)
+     //eslint-disable-next-line
   }, [props.display])
   // this showing whats displayed so have to reset this when update submit
 

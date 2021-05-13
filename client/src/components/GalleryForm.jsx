@@ -49,6 +49,7 @@ export default function GalleryForm(props) {
 
   useEffect(() => {
     getYourGallery()
+     //eslint-disable-next-line
   }, [galleryID])
   //stops infinite loop
   //use this to reset galleryID - sent to ?
