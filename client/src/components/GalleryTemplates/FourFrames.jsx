@@ -13,7 +13,7 @@ export default function FourFrames(props) {
           return image.id === item.image_id
         })
         return (<div key={index} className={`_${index + 1 }`}>
-          <img alt ="Input in gallery" className={`img-${index + 1}`}src = {foundImage.url}/>
+          <img alt="Input in gallery" className={`img-${index + 1}`} src={foundImage.url} style={{ border: "3px solid orange" }}/>
       </div>)
       }
 

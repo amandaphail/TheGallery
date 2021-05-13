@@ -42,7 +42,7 @@ export default function GalleryContent(props) {
 
     } else if (gallery.number_of_frames === 5) {
       return <FiveFrames gallery={gallery}/>
-    }
+    } 
   }
 
 
