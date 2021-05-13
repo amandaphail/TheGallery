@@ -9,15 +9,15 @@ export default function FourFrames(props) {
   const templateDisplay = () => {
     if (gallery) {
       return gallery.gallery_images.map((item, index) => {
-        console.log(item.frame_color)
+        // console.log(item.frame_color)
 
         let foundImage = gallery.images.find((image) => {
-          console.log(image)
+          // console.log(image)
           return image.id === item.image_id
         })
 
         return (<div key={index} className={`_${index + 1 }`}>
-          <img alt="Input in gallery" className={`img-${index + 1}`} src={foundImage.url} style={{ border: `5px solid ${item.frame_color}` }}/>
+          <img alt="Input in gallery" className={`img-${index + 1}`} src={foundImage.url} style={{ border: `3px solid ${item.frame_color}` }}/>
       </div>)
       }
 
