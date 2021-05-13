@@ -19,6 +19,7 @@ export default function ImagesForm(props) {
 
   useEffect(() => {
     yourGallery(galleryID)
+     //eslint-disable-next-line
   }, [props])
   
   //attach images to gallery and display
@@ -39,6 +40,7 @@ export default function ImagesForm(props) {
   
   useEffect(() => {
     setDisplay("null")
+     //eslint-disable-next-line
   },[galleryID])
   
   function handleChange(event) {
