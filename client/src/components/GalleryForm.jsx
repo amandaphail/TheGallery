@@ -1,5 +1,5 @@
 import "./CSS/galleryform.css"
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import { createGallery, updateGallery, getGallery } from "../services/galleries"
 
 export default function GalleryForm(props) {
@@ -44,15 +44,20 @@ export default function GalleryForm(props) {
   //if galleryID - then {update()} - this will have update form which calls handle update - also have it populate with what the gallery already is
 
   // console.log(galleryID)
+
+  useEffect(() => {
+    getYourGallery()
+  }, [galleryID])
+  //stops infinite loop
+
   const formDisplay = () => {
     
     if (!galleryID) {
       return createForm() 
     } else {
       console.log("You've already created a gallery!")
-      // getYourGallery()
       return updateForm()
-      // infinite loop happening in whole else statement
+      
     }
   }
     
@@ -67,7 +72,7 @@ export default function GalleryForm(props) {
 
   const getYourGallery = async () => {
     const info = await getGallery(galleryID);
-    setGallery(info);
+    await setGallery(info);
     // this is allowing it to populate with what you have already in your gallery?
     console.log(gallery)
   };
