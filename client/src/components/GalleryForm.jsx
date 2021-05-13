@@ -88,9 +88,6 @@ export default function GalleryForm(props) {
   const createForm = () => {
     return (
       <div>
-
-      <h2>Create</h2>
-
       <form id="gsform" onSubmit={handleSubmit}>
         <div className="formdivs">
         <label>Number of frames: </label>
@@ -119,7 +116,6 @@ export default function GalleryForm(props) {
   const updateForm = () => {
     return (
       <div>
-        <h2>Update</h2>
       <form id="gsform" onSubmit={handleUpdate}>
         <div className="formdivs">
         <label>Number of frames: </label>
@@ -135,7 +131,7 @@ export default function GalleryForm(props) {
         </div>
 
         <div className="formdivs">
-        <input type="submit" />
+        <input type="submit" value="Update"/>
           {/* {button()} */}
         </div>
         
