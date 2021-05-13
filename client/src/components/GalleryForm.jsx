@@ -72,9 +72,7 @@ export default function GalleryForm(props) {
     console.log(gallery)
   };
 
-  // const deleteButton = async () => {
-  //   return <button onClick={deleteYourGallery}>Delete</button>
-  // }
+  
 
   const deleteYourGallery = async () => {
     console.log(galleryID)
