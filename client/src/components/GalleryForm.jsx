@@ -1,6 +1,6 @@
 import "./CSS/galleryform.css"
 import {useState, useEffect} from "react"
-import { createGallery, updateGallery, getGallery } from "../services/galleries"
+import { createGallery, updateGallery, getGallery, deleteGallery } from "../services/galleries"
 
 export default function GalleryForm(props) {
 
@@ -34,6 +34,7 @@ export default function GalleryForm(props) {
     event.preventDefault()
     await updateGallery(galleryID, gallery)
     // setGalleryID(yourGallery.id)
+    console.log(gallery)
     // history push to gallery display page?
     
   }
@@ -52,7 +53,7 @@ export default function GalleryForm(props) {
 
   const formDisplay = () => {
     
-    if (!galleryID) {
+    if (!galleryID || galleryID === "null") {
       return createForm() 
     } else {
       console.log("You've already created a gallery!")
@@ -76,6 +77,17 @@ export default function GalleryForm(props) {
     // this is allowing it to populate with what you have already in your gallery?
     console.log(gallery)
   };
+
+  const deleteButton = async () => {
+    return <button onClick={deleteYourGallery()}>Delete</button>
+  }
+
+  const deleteYourGallery = async () => {
+    console.log(galleryID)
+    await deleteGallery(galleryID)
+    console.log(`${galleryID} has been deleted`)
+    // setGalleryID("null")
+  }
 
   const createForm = () => {
     return (
@@ -132,7 +144,7 @@ export default function GalleryForm(props) {
         </div>
         
         </form>
-        {/* delete button */}
+        {/* {deleteButton()} */}
       </div>
     )
   }
