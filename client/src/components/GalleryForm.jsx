@@ -30,6 +30,39 @@ export default function GalleryForm(props) {
     
   }
 
+  //if !galleryID - then {create()} - this will have create form which calls handle submit
+  //if galleryID - then {update()} - this will have update form which calls handle update - also have it populate with what the gallery already is
+
+
+  const createForm = () => {
+    return (
+      <form id="gsform" onSubmit={handleSubmit}>
+        <div className="formdivs">
+        <label>Number of frames: </label>
+        <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        </div>
+
+        <div className="formdivs">
+        <label>Wall Color: </label>
+          <input type="color" id="wall_color" value={gallery.wall_color} onChange={handleChange}/>
+        </div>
+
+        <div className="formdivs">
+          <input type="submit" />
+          {/* {button()} */}
+        </div>
+        
+      </form>
+    )
+  }
+
+
+
+
+
 // with conditional in handle submit function
 
   // async function update () {
@@ -52,6 +85,7 @@ export default function GalleryForm(props) {
     //   return (<button onclick={update()}>Update</button>)
     // } else {
     //   return (
+    
       return  <input type="submit"/>
         // )
     
@@ -66,15 +100,13 @@ export default function GalleryForm(props) {
 
   return (
     <div>
-      <form id="gsform" onSubmit={handleSubmit}>
+      {createForm()}
+      {/* <form id="gsform" onSubmit={handleSubmit}>
         <div className="formdivs">
         <label>Number of frames: </label>
         <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
           <option>4</option>
           <option>5</option>
-          {/* <option>6</option>
-          <option>7</option>
-          <option>8</option> */}
         </select>
         </div>
 
@@ -85,10 +117,10 @@ export default function GalleryForm(props) {
 
         <div className="formdivs">
           {/* <input type="submit" /> */}
-          {button()}
-        </div>
+          {/* {button()} */}
+        {/* </div>
         
-      </form>
+      </form> */} 
     </div>
   )
 }
