@@ -4,7 +4,6 @@ import { createGallery, updateGallery, getGallery, deleteGallery } from "../serv
 
 export default function GalleryForm(props) {
 
-  // let setFrameNumber = props.setFrameNumber
   let galleryID = props.galleryID
   let setGalleryID = props.setGalleryID
 
@@ -21,12 +20,10 @@ export default function GalleryForm(props) {
     }))
     
   }
-  // console.log(gallery)
   async function handleSubmit(event) {
     event.preventDefault()
     const yourGallery = await createGallery(gallery)
     setGalleryID(yourGallery.id)
-    // history push to gallery display page?
     
   }
 

@@ -9,13 +9,10 @@ export default function GalleryContent(props) {
   let galleryID = props.galleryID
   let display = props.display
 
-  // console.log(galleryID, display)
   
 
   const [gallery, setGallery] = useState({})
   
-  //extract number of frames from ID
-  //also using once images set
   async function yourGallery(id) {
     if (galleryID) {
       let galleryInfo = await getGallery(id)
@@ -27,20 +24,15 @@ export default function GalleryContent(props) {
     yourGallery(galleryID)
      //eslint-disable-next-line
   }, [props.galleryID, props.toggle])
-  //use efect for gallery to update when i submit update - [?] 
 
   useEffect(() => {
     yourGallery(display)
      //eslint-disable-next-line
   }, [props.display])
-  // this showing whats displayed so have to reset this when update submit
 
 
   const displayTemplate = () => {
-    // console.log(gallery)
-    // if (gallery === {}){ 
-    // return <div> </div>
-    // }
+   
     if (gallery.number_of_frames === 4) {
       return <FourFrames gallery={gallery}/>
 
@@ -50,7 +42,6 @@ export default function GalleryContent(props) {
   }
 
 
-  // console.log(gallery)
 
   const style = {
     background: `${gallery.wall_color}`,
