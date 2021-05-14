@@ -31,7 +31,7 @@ export default function FourFrames(props) {
       // console.log("gallery")
       return (
         <>
-          <div className="fiveleft">
+          <div id="fiveleft">
           <div className="_5">
               {templateFive()}
             </div>

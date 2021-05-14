@@ -21,6 +21,21 @@
   justify-content: space-between;
 }
 
+#fiveleft {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#fiveright {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
 ._1 {
   background-color: rgb(187, 185, 185);
   width: 150px;
@@ -49,8 +64,8 @@
 
 ._5 {
   background-color: rgb(187, 185, 185);
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 100px;
 }
 
 .img-1 {
@@ -82,8 +97,8 @@
 }
 
 .img-5 {
-  width: 70px;
-  height: 70px;
-  max-width: 70px;
-  max-height: 70px;
+  width: 90px;
+  height: 100px;
+  max-width: 90px;
+  max-height: 100px;
 }
