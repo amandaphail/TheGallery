@@ -23,7 +23,6 @@ export const updateGallery = async (id, galleryData) => {
   const resp = await api.put(`/galleries/${id}`, galleryData)
   return resp.data
 }
-//if change color or number of frames - update button
 
 export const deleteGallery = async (id) => {
   const resp = await api.delete(`galleries/${id}`)
