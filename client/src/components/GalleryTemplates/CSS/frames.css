@@ -40,8 +40,8 @@
   background-color: rgb(187, 185, 185);
   width: 150px;
   height: 200px;
-  max-width: 150px;
-  max-height: 200px;
+  /* max-width: 150px;
+  max-height: 200px; */
 }
 
 ._2 {
@@ -101,4 +101,89 @@
   height: 100px;
   max-width: 90px;
   max-height: 100px;
+}
+
+/* @media only screen and (max-width: 1100px) {
+} */
+
+@media only screen and (max-width: 550px) {
+  #framescontainer {
+    margin-top: 50px;
+  }
+
+  #foursmall {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #fiveleft {
+    margin-right: 10px;
+  }
+
+  #fiveright {
+    margin-left: 10px;
+  }
+
+  ._1 {
+    width: 100px;
+    height: 150px;
+    /* max-width: 150px;
+    max-height: 200px; */
+  }
+
+  ._2 {
+    width: 115px;
+    height: 85px;
+  }
+
+  ._3 {
+    width: 40px;
+    height: 40px;
+  }
+
+  ._4 {
+    width: 40px;
+    height: 40px;
+  }
+
+  ._5 {
+    width: 50px;
+    height: 60px;
+  }
+
+  .img-1 {
+    width: 100px;
+    height: 150px;
+  }
+
+  .img-2 {
+    width: 115px;
+    height: 85px;
+  }
+
+  .img-3 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .img-4 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .img-5 {
+    width: 50px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  ._2 {
+    width: 75px;
+    height: 65px;
+  }
+  .img-2 {
+    width: 75px;
+    height: 65px;
+  }
 }

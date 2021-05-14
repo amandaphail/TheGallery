@@ -18,8 +18,8 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   /* flex-direction: column; */
   /* justify-content: ; */
 }
@@ -61,4 +61,40 @@
   border-radius: 5px;
   padding: 10px;
   font-weight: bold;
+}
+
+/* @media only screen and (max-width: 1100px) {
+} */
+
+@media only screen and (max-width: 550px) {
+  #imagelabel {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .submit {
+    font-size: 12px;
+  }
+
+  #displayform {
+    width: 100%;
+  }
+
+  #infoinput {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .colorinput {
+    margin: 10px;
+  }
+  .textinput {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #infoinput {
+    display: inline;
+  }
 }
