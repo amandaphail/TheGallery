@@ -1,5 +1,6 @@
 #imagesform {
   width: 80%;
+  /* height: 100px; */
   /* display: flex;
   justify-content: center; */
 }
@@ -12,6 +13,7 @@
 #displayform {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
@@ -26,7 +28,11 @@
   justify-content: space-around;
 }
 
-/* .displayinput {
+.displayinput {
   margin: 10px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+}
+
+/* #infoinput{
+
 } */
