@@ -30,33 +30,23 @@ export default function GalleryForm(props) {
   async function handleUpdate(event) {
     event.preventDefault()
     await updateGallery(galleryID, gallery)
-    // setGalleryID(yourGallery.id)
     props.setToggle(prevState => !prevState)
-    // console.log(gallery)
-    // history push to gallery display page?
     
   }
 
 
 
-  //if !galleryID - then {create()} - this will have create form which calls handle submit
-  //if galleryID - then {update()} - this will have update form which calls handle update - also have it populate with what the gallery already is
-
-  // console.log(galleryID)
 
   useEffect(() => {
     getYourGallery()
      //eslint-disable-next-line
   }, [galleryID])
-  //stops infinite loop
-  //use this to reset galleryID - sent to ?
 
   const formDisplay = () => {
     
     if (!galleryID || galleryID === "null") {
       return createForm() 
     } else {
-      // console.log("You've already created a gallery!")
       return updateForm()
       
     }
@@ -67,18 +57,13 @@ export default function GalleryForm(props) {
     if (galleryID) {
       const info = await getGallery(galleryID);
       await setGallery(info);
-      // this is allowing it to populate with what you have already in your gallery?
-      // console.log(gallery)
     }
   };
 
   
 
   const deleteYourGallery = async () => {
-    // console.log(galleryID)
     await deleteGallery(galleryID)
-    // console.log(`${galleryID} has been deleted`)
-    // setGalleryID("null")
     window.location.reload()
   }
 
@@ -143,47 +128,9 @@ export default function GalleryForm(props) {
   }
 
 
-// with conditional in handle submit function
-
-  // async function update () {
-  //   console.log(galleryID)
-  //   await updateGallery(galleryID, gallery)
-  //   console.log("update button works")
-  //   console.log(galleryID)
-  // }
-
-  // async function create(){
-  //   const yourGallery = await createGallery(gallery)
-  //   setGalleryID(yourGallery.id)
-  // }
-
-  
-  // console.log(galleryID)
-  
-  // const button = () => {
-  //   // if (galleryID) {
-  //   //   return (<button onclick={update()}>Update</button>)
-  //   // } else {
-  //   //   return (
-    
-  //     return  <input type="submit"/>
-  //       // )
-    
-  // }
-
-  // const update = () => {
-  //   console.log(galleryID)
-  //   updateGallery(galleryID, gallery)
-  //   console.log("update button works")
-  //   console.log(galleryID)
-  // }
-
   return (
     <div>
-      {formDisplay()}
-      {/* {createForm()} */}
-      {/* {updateForm()} */}
-      
+      {formDisplay()}      
     </div>
   )
 }
