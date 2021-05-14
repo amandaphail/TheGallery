@@ -8,6 +8,11 @@
   /* padding-top: 50px; */
 }
 
+#frames {
+  display: flex;
+  justify-content: center;
+}
+
 #desk {
-  width: 30%;
+  width: 25%;
 }

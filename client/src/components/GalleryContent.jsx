@@ -58,7 +58,7 @@ export default function GalleryContent(props) {
 
   return (
     <div id="content" style={style}>
-      <div>
+      <div id ="frames">
         {displayTemplate()}
         </div>
         <div>

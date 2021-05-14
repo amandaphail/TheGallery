@@ -49,22 +49,29 @@ export default function FourFrames(props) {
 
   const templateDisplay = () => {
     if (gallery) {
-      console.log("gallery")
+      // console.log("gallery")
       return (
         <>
-          <div className="_1">
-            {templateOne()}
-      </div>
-      <div className="_2">
+        <div id ="fourleft">
+              <div className="_1">
+                {templateOne()}
+              </div>
+          </div>
+          <div id = "fourright">
+          <div className="_2">
             {templateTwo()}
-      </div>
-      <div className="_3">
-            {templateThree()}
-      </div>
-      <div className="_4">
-             {templateFour()}
-      </div>
-          </>
+          </div>
+            
+          <div id ="foursmall">
+            <div className="_3">
+              {templateThree()}
+            </div>
+            <div className="_4">
+              {templateFour()}
+            </div>
+          </div>
+        </div>
+        </>
       )
 
     } 
@@ -72,28 +79,24 @@ export default function FourFrames(props) {
 
   const templateOne = () => {
     if (gallery.images[0]) {
-      // console.log("one")
         return <img className="img-1" src={gallery.images[0].url} style={{ border: `3px solid ${gallery.gallery_images[0].frame_color}` }}/> 
     }
   }
 
   const templateTwo = () => {
     if (gallery.images[1]) {
-      // console.log("one")
         return <img className="img-2" src={gallery.images[1].url} style={{ border: `3px solid ${gallery.gallery_images[1].frame_color}` }}/> 
     }
   }
 
   const templateThree = () => {
     if (gallery.images[2]) {
-      // console.log("one")
         return <img className="img-3" src={gallery.images[2].url} style={{ border: `3px solid ${gallery.gallery_images[2].frame_color}` }}/> 
     }
   }
 
   const templateFour = () => {
     if (gallery.images[3]) {
-      // console.log("one")
         return <img className="img-4" src={gallery.images[3].url} style={{ border: `3px solid ${gallery.gallery_images[3].frame_color}` }}/> 
     }
   }

@@ -1,9 +1,22 @@
 #framescontainer {
+  margin-top: 20px;
+  width: 50%;
   display: flex;
+  justify-content: center;
+}
+
+/* #template {
+  display: flex;
+  justify-content: space-between;
+} */
+#fourright {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
 }
 
-#template {
+#foursmall {
   display: flex;
   justify-content: space-between;
 }
