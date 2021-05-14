@@ -5,8 +5,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .formdivs {
   margin: 10px;
+}
+
+#label {
+  font-weight: bold;
+}
+
+#number_of_frames {
+  background-color: #ffbaba;
+  color: #f16262;
+  padding: 3px;
+  font-size: 15px;
+}
+
+#wall_color {
+  background-color: #ffbaba;
+}
+
+#submit {
+  margin-bottom: 30px;
+  background-color: #ffbaba;
+  color: #f16262;
+  border: 2px solid #f16262;
+  border-radius: 5px;
+  padding: 10px;
 }

@@ -90,7 +90,7 @@ export default function GalleryForm(props) {
       <div>
       <form id="gsform" onSubmit={handleSubmit}>
         <div className="formdivs">
-        <label>Number of frames: </label>
+        <label id="label">Number of frames: </label>
         <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
           <option>4</option>
           <option>5</option>
@@ -98,12 +98,12 @@ export default function GalleryForm(props) {
         </div>
 
         <div className="formdivs">
-        <label>Wall Color: </label>
+        <label id="label">Wall Color: </label>
           <input type="color" id="wall_color" value={gallery.wall_color} onChange={handleChange}/>
         </div>
 
         <div className="formdivs">
-          <input type="submit"/>
+          <input id="submit" type="submit"/>
           {/* {button()} */}
         </div>
         
@@ -118,7 +118,7 @@ export default function GalleryForm(props) {
       <div>
       <form id="gsform" onSubmit={handleUpdate}>
         <div className="formdivs">
-        <label>Number of frames: </label>
+        <label id="label">Number of frames: </label>
         <select id="number_of_frames" form="gsform" value = {gallery.number_of_frames} onChange={handleChange}>
           <option>4</option>
           <option>5</option>
@@ -126,18 +126,21 @@ export default function GalleryForm(props) {
         </div>
 
         <div className="formdivs">
-        <label>Wall Color: </label>
+        <label id="label">Wall Color: </label>
           <input type="color" id="wall_color" value={gallery.wall_color} onChange={handleChange}/>
         </div>
 
         <div className="formdivs">
-        <input type="submit" />
+        <input id = "submit"type="submit" />
           {/* {button()} */}
         </div>
         
-        </form>
+      </form>
         {/* {deleteButton()} */}
-        <button onClick={deleteYourGallery}>Delete</button>
+        <div id="delete">
+        <p id="label">You can delete your gallery here: </p>
+        <button id="submit" onClick={deleteYourGallery}>Delete</button>
+        </div>
       </div>
     )
   }
