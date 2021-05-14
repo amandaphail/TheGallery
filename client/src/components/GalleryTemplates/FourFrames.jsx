@@ -79,7 +79,7 @@ export default function FourFrames(props) {
 
   const templateOne = () => {
     if (gallery.images[0]) {
-        return <img className="img-1" src={gallery.images[0].url} style={{ border: `3px solid ${gallery.gallery_images[0].frame_color}` }}/> 
+        return <img alt="one" className="img-1" src={gallery.images[0].url} style={{ border: `3px solid ${gallery.gallery_images[0].frame_color}` }}/> 
     } else {
       return <div>1</div>
     }
@@ -87,7 +87,7 @@ export default function FourFrames(props) {
 
   const templateTwo = () => {
     if (gallery.images[1]) {
-        return <img className="img-2" src={gallery.images[1].url} style={{ border: `3px solid ${gallery.gallery_images[1].frame_color}` }}/> 
+        return <img alt="two" className="img-2" src={gallery.images[1].url} style={{ border: `3px solid ${gallery.gallery_images[1].frame_color}` }}/> 
     }else {
       return <div>2</div>
     }
@@ -95,7 +95,7 @@ export default function FourFrames(props) {
 
   const templateThree = () => {
     if (gallery.images[2]) {
-        return <img className="img-3" src={gallery.images[2].url} style={{ border: `3px solid ${gallery.gallery_images[2].frame_color}` }}/> 
+        return <img alt="three" className="img-3" src={gallery.images[2].url} style={{ border: `3px solid ${gallery.gallery_images[2].frame_color}` }}/> 
     } else {
       return <div>3</div>
     }
@@ -103,7 +103,7 @@ export default function FourFrames(props) {
 
   const templateFour = () => {
     if (gallery.images[3]) {
-        return <img className="img-4" src={gallery.images[3].url} style={{ border: `3px solid ${gallery.gallery_images[3].frame_color}` }}/> 
+        return <img alt="four" className="img-4" src={gallery.images[3].url} style={{ border: `3px solid ${gallery.gallery_images[3].frame_color}` }}/> 
     } else {
       return <div>4</div>
     }
