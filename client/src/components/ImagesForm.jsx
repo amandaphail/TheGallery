@@ -99,11 +99,11 @@ export default function ImagesForm(props) {
         // console.log(i)
         return (
           <div key={i} id="infoinput">
-            <label>Frame {i + 1}:</label>
-            <input id={i + 1} className="displayinput" type="text" onChange={handleChange} />
+            <label id="imagelabel">Frame {i + 1}: </label>
+            <input id={i + 1} className ="textinput" type="text" onChange={handleChange} />
 
-            <label>Frame Color:</label>
-            <input id={i + 1} className="displayinput" type="color" onChange={handleChange} />
+            <label id="imagelabel">Frame Color: </label>
+            <input id={i + 1} className="colorinput" type="color" onChange={handleChange} />
           </div>
         
         )
@@ -117,7 +117,7 @@ export default function ImagesForm(props) {
     if (galleryID) {
       return (
         <div>
-            <input className="displayinput" type="submit" />
+            <input className="submit" type="submit" />
           </div>
       )
     }
