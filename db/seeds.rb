@@ -10,7 +10,6 @@ Image.destroy_all
 Gallery.destroy_all
 
 
-# Gallery.create!(number_of_frames: 6, wall_color: "orange")
 
 images = [
   {
@@ -64,7 +63,6 @@ galleries = [
   {
     number_of_frames: 5,
     wall_color: "orange",
-    # image: images[2]
   },
   {
     number_of_frames: 5,
@@ -87,7 +85,6 @@ if Gallery.create!(galleries)
   puts "Gallery seeded"
 end
 
-# Gallery.first.images << Image.first
 
 Gallery.all.each do |gallery|
   5.times do

@@ -8,7 +8,6 @@ class GalleriesController < ApplicationController
   def show
     @gallery = Gallery.find(params[:id]) 
 
-    # render json: @gallery, include: [:image]
     render json: @gallery, include: [:images, :gallery_images]
   end
 

@@ -1,6 +1,5 @@
 class ImagesController < ApplicationController
   
-  # before_action :set_image, only: %i[show update destroy]
 
   def all_images
     @images = Image.all
@@ -22,10 +21,9 @@ class ImagesController < ApplicationController
   end
 
   def create
-    # render json: params
     @gallery = Gallery.find(params[:gallery_id])
     puts @gallery.inspect
-    # loop of array of images that are submitted
+
     @image = Image.new(url: params[:url])
     if @image.save!
       @gallery_image = GalleryImage.new(image: @image, gallery_id: params[:gallery_id], position: params[:position], frame_color: params[:frame_color])
@@ -35,15 +33,7 @@ class ImagesController < ApplicationController
       else
         render json: @image.errors, status: :unprocessable_entity
       end
-  
     end
-
-    # if @image.save
-    #   # @gallery.images << @image
-    #   render json: @image, status: :created
-    # else
-    #   render json: @image.errors, status: :unprocessable_entity
-    # end
   end
 
   def update
