@@ -8,14 +8,11 @@ export default function ImagesForm(props) {
   let setDisplay = props.setDisplay
   const [gallery, setGallery] = useState({})
   
-  //extract number of frames from gallery ID
   async function yourGallery(id) {
     if (id) {
       
       let galleryInfo = await getGallery(id)
-      // console.log(galleryInfo)
       await setGallery(galleryInfo)
-      // await setDisplay(galleryInfo)
     }
     
   }
@@ -25,7 +22,6 @@ export default function ImagesForm(props) {
      //eslint-disable-next-line
   }, [props])
   
-  //attach images to gallery and display
   const [images, setImages] = useState([])
   
 
@@ -71,7 +67,6 @@ export default function ImagesForm(props) {
 
   }
 
-  // console.log(images)
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -85,8 +80,6 @@ export default function ImagesForm(props) {
   
   
 
-  // console.log(gallery)
-  // console.log(gallery.gallery_images[1].position)
 
 
   
@@ -96,7 +89,6 @@ export default function ImagesForm(props) {
   const displayInput = () => {
     if (galleryID) {
       return [...Array(gallery.number_of_frames)].map((item, i) => {
-        // console.log(i)
         return (
           <div key={i} id="infoinput">
             <label id="imagelabel">Frame {i + 1}: </label>
@@ -107,9 +99,7 @@ export default function ImagesForm(props) {
           </div>
         
         )
-
-      })
-      
+      })   
     }
   }
 
@@ -136,9 +126,7 @@ export default function ImagesForm(props) {
           </div>
 
           {displaySubmit()}
-          {/* <div>
-            <input className="displayinput" type="submit" />
-          </div> */}
+          
         </div>
 
 
