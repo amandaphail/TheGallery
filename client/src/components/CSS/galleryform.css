@@ -21,10 +21,13 @@
   color: #f16262;
   padding: 3px;
   font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #f16262;
 }
 
 #wall_color {
   background-color: #ffbaba;
+  border: 1px solid #f16262;
 }
 
 #submit {
@@ -34,4 +37,5 @@
   border: 2px solid #f16262;
   border-radius: 5px;
   padding: 10px;
+  font-weight: bold;
 }
