@@ -3,6 +3,11 @@
   justify-content: space-around;
 }
 
+#template {
+  display: flex;
+  justify-content: space-between;
+}
+
 ._1 {
   background-color: rgb(187, 185, 185);
   width: 150px;

@@ -6,25 +6,50 @@ export default function FourFrames(props) {
   let gallery = props.gallery
   // console.log(gallery.images[0].url)
 
+
+  
   const templateDisplay = () => {
+    
     if (gallery) {
-      return gallery.gallery_images.map((item, index) => {
-        // console.log(item.frame_color)
+    
+      if (gallery.images = []) {
+        return (
+          <div id="template">
+            <div className="_1">1</div>
+            <div className="_2">2</div>
+            <div className="_3">3</div>
+            <div className="_4">4</div>
+          </div>
+        )
+      } else {
 
-        let foundImage = gallery.images.find((image) => {
-          // console.log(image)
-          return image.id === item.image_id
+        return gallery.gallery_images.map((item, index) => {
+          // console.log(item.frame_color)
+
+          let foundImage = gallery.images.find((image) => {
+            // console.log(image)
+            return image.id === item.image_id
+          })
+
+       
+          return (
+            <div key={index} className={`_${index + 1}`}>
+              <img alt="Input in gallery" className={`img-${index + 1}`} src={foundImage.url} style={{ border: `3px solid ${item.frame_color}` }} />
+            </div>
+          )
         })
-
-        return (<div key={index} className={`_${index + 1 }`}>
-          <img alt="Input in gallery" className={`img-${index + 1}`} src={foundImage.url} style={{ border: `3px solid ${item.frame_color}` }}/>
-      </div>)
       }
-
-      )
-
-    }
+    } 
   }
+  
+  return (
+    
+    <div id="framescontainer">
+      {templateDisplay()}
+    </div>
+  )
+}
+
 //   const templateDisplay = () => {
 //     if (gallery) {
 //       console.log("gallery")
@@ -75,10 +100,3 @@ export default function FourFrames(props) {
 //         return <img id="img-four" src={gallery.images[3].url} /> 
 //     }
 //   }
-
-  return (
-    <div id="framescontainer">
-      {templateDisplay()}
-    </div>
-  )
-}

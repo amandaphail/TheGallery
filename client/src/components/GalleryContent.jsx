@@ -37,6 +37,10 @@ export default function GalleryContent(props) {
 
 
   const displayTemplate = () => {
+    // console.log(gallery)
+    // if (gallery === {}){ 
+    // return <div> </div>
+    // }
     if (gallery.number_of_frames === 4) {
       return <FourFrames gallery={gallery}/>
 
