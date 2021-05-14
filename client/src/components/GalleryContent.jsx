@@ -62,9 +62,7 @@ export default function GalleryContent(props) {
         {displayTemplate()}
         </div>
         <div>
-       
-        <img id ="desk" src={desk} alt="desk"/>
-        
+          <img id ="desk" src={desk} alt="desk"/>       
         </div>
     </div>
   )
