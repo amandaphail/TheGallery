@@ -1,27 +1,29 @@
-import React from 'react'
 import "./CSS/frames.css"
+import {useEffect} from "react"
 
 export default function FourFrames(props) {
 
   let gallery = props.gallery
   // console.log(gallery.images[0].url)
 
-
+  // useEffect(() => {
+  //  templateDisplay() 
+  // },[props.gallery.images])
   
   const templateDisplay = () => {
     
     if (gallery) {
     
-      if (gallery.images = []) {
-        return (
-          <div id="template">
-            <div className="_1">1</div>
-            <div className="_2">2</div>
-            <div className="_3">3</div>
-            <div className="_4">4</div>
-          </div>
-        )
-      } else {
+      // if (gallery.images = []) {
+      //   return (
+      //     <div id="template">
+      //       <div className="_1">1</div>
+      //       <div className="_2">2</div>
+      //       <div className="_3">3</div>
+      //       <div className="_4">4</div>
+      //     </div>
+      //   )
+      // } else {
 
         return gallery.gallery_images.map((item, index) => {
           // console.log(item.frame_color)
@@ -38,7 +40,7 @@ export default function FourFrames(props) {
             </div>
           )
         })
-      }
+      // }
     } 
   }
   
