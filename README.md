@@ -1,5 +1,7 @@
 # The Gallery
 
+## [Check out The Gallery here!](https://thegalleryforyou.netlify.app/)
+
 - [Overview](#overview)
 - [MVP](#mvp)
 - [Post-MVP](#post-mvp)
